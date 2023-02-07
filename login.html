@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet " href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+
+      <nav>
+        <ul class="navBar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+          <li><a href="contactMe.html">Contact me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="myWork.html">My work</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="login">Login</a>
+    </header>
+    <div class="title"><h1>LOGIN</h1></div>
+    <form class="loginForm" action="adminHome.html" method="get">
+      <input id="logEmail" type="email" name="email" placeholder="Email address" required><br>
+      <input id="password" type="password" name="password" placeholder="password" required><br>
+      <a href="adminHome.html"><input id="sending" type="submit" name="login" value="LOGIN" ></a>
+      <!-- <input id="sending" type="submit" name="login" value="LOGIN" ><br>       -->
+    </form>
+    <div id="noAccount">
+    <h6 >Don't have an account?<a  id="signUp" onclick="document.getElementById('model-wrapper').style.display='block'"> SignUp</a></h6>
+  </div>
+  <!-- <button onclick="document.getElementById('model-wrapper').style.display='block'">open popup</button> -->
+
+
+<!-- popUp model -->
+
+
+  <div id="model-wrapper" class="bgModel">
+    <div class="modelContent">
+      <div class="close">
+        <a href="login.html">+</a></div>
+      
+  <form action="" method="get">
+    <h1 id="signupTitle">Sign up</h1>
+    <a id="google" href=""> Sign up with Google</a>
+    <a id='facebook' href="">Sign up with Facebook</a>
+    <div id="or"><h6>-OR-</h6></div>
+    <input id="name" type="text" name="name" placeholder="Full name" required><br>
+    <input id="logEmail" type="email" name="email" placeholder="Email address" required><br>
+    <input id="password" type="password" name="password" placeholder="Password" required><br>
+    <input id="password" type="password" name="password" placeholder="Confirm your password" required><br>
+
+    <input id="sending" type="submit" name="create" value="Create account" ><br>      
+    
+    <div id="haveAccount">
+      <h4>Already have an account?<a href="" id="haveSign" > Login</a></h4>
+    </div>
+
+  </form>
+
+    </div>
+  </div>
+  
+  </body>
+</html>

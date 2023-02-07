@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet " href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+
+      <nav>
+        <ul class="navBar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+          <li><a href="contactMe.html">Contact me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="myWork.html">My work</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="login">Log out</a>
+    </header>
+    <!-- search -->
+    <div>
+      <input id="search" type="search" placeholder="search" />
+    </div>
+    <h2 id="h2">ADD a POST</h2>
+
+    <!-- flexbox -->
+    <div class="adminFlex">
+      <div class="adminContent">
+        <div class="adminColumns col11">
+          <div class="leftTable">
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-chart-simple"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="adminHome.html"><p>Stats</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-plus"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="addPost.html"><p>Add post</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-list-check"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="managePost.html"><p>Manage post</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-user-plus"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="addUser.html"><p>Add user</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-users"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="manageUsers.html"><p>Manage users</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-bars-progress"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="manageCategories.html"><p>Categories</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-envelope-open-text"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="messages.html"><p>Messages</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-delete-left"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="recentlyDeleted.html"><p>Recently deleted</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right table -->
+
+        <div class="adminColumns col22">
+            <div class="postForm">
+          <div>
+            <label for="title">Title</label><br />
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="e.g: Can we really leave AI and machine learning to it so that we can ponder more strategic matters?"
+              required="required"
+            />
+          </div>
+          <div>
+            <label for="category">Category</label> <br />
+            <select
+              id="category"
+              name="category"
+              class="category"
+              required="required"
+            >
+              <option value="" disabled selected hidden>
+                e.g: Video games
+
+
+              </option>
+              <option value="">Artificial Intelligence
+
+              </option>
+              <option value="">Health and Sport</option>
+              <option value="">Machine Learning
+
+              </option>
+              <option value="">Internet Of Things
+
+              </option>
+              <option value="">Augmented Reality
+
+              </option>
+              <option value="">Virtual Reality
+              </option>
+              <option value="">Video games
+
+
+
+              </option>
+              
+              
+              </select
+            ><br />
+          </div>
+
+          <div>
+            <label for="date">Enter the date</label><br />
+            <input type="date" name="date" id="date" required="required" />
+          </div>
+
+          <div>
+            <label for="Image">Image</label><br />
+            <input
+              type="file"
+              name="link"
+              id="link"
+              placeholder="e.g: https://twitter.com/AndelaRwanda/status/1500807010144632834 "
+              required="required"
+            />
+          </div>
+          <div>
+            <label for="picture">Post</label><br />
+            <textarea type="textarea"
+            name="description"
+            id="description"
+            placeholder="e.g: Machine Learning and Augmented Reality"
+            required="required">
+              
+            </textarea>
+          </div>
+          
+          
+          <!--Action buttons-->
+
+          <div class="form_action--button">
+            <input type="submit" value="SAVE" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- <footer>
+            <div class="socials">
+                <a href="https://github.com/madebypatrick" target="_blank"><i class="fa-brands fa-github" ></i></a>
+                <a href="https://www.linkedin.com/in/patrick-mugwaneza-56034a245" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+           </div>
+        </footer> -->
+  </body>
+</html>
