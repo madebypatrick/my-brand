@@ -356,12 +356,11 @@ footer {
   text-shadow: 2px 5px 2px grey;
 }
 /* ============================login======================= */
-
 #fname,#logEmail,#logEmailUp,
 #password ,#passwordUp ,#passwordConf{
   /* background-color: white; */
   font-size: 16px;
-  min-width: 300px;
+  width: 300px;
   /* border: 1px solid grey; */
   border-radius: 5px;
   margin: 10px 0;
@@ -385,7 +384,7 @@ footer {
   font-family: "roboto-flex", sans-serif;
   padding: 5px 40px;
   /* margin:0; */
-  margin: 10px 0 20px 145px;
+  margin: 20px 0 30px 145px;
   
 }
 
@@ -438,7 +437,7 @@ footer {
 }
 .modelContent {
   width: 500px;
-  height: 500px;
+  height: 520px;
   background-color: white;
   border-radius: 4px;
   position: relative;
@@ -468,8 +467,7 @@ footer {
     padding-bottom: 20px;
   }
   .modelContent input[type="password"]::placeholder{
-padding-left: 20px; 
-
+padding-left: 10px; 
 }
 
 #google {
@@ -526,46 +524,38 @@ padding-left: 20px;
 
   /*================== Sign-up form validation's================= */
   
-.inputControl {
-	position: relative;
-}
-.inputControl input {
-	border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
-	font-family: inherit;
-	font-size: 14px;
-	/* padding: 10px; */
-	/* width: 100%; */
+.input-control {
+  display: flex;
+  flex-direction: column;
 }
 
-.inputControl input:focus {
-	outline: 0;
-	border-color: #777;
+.input-control input {
+  border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+font-size: 12px;
+padding: 10px;
+width: 100%;
 }
 
-.inputControl.success input {
-	border-color: #2ecc71;
+.input-control input:focus {
+  outline: 0;
 }
 
-.inputControl.error input {
-	border-color: #e74c3c;
+.input-control.success input {
+  border-color: #09c372;
 }
 
-
-
-.inputControl small {
-	color: #e74c3c;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
+.input-control.error input {
+  border-color: #ff3860;
 }
 
-.inputControl.error small {
-	visibility: visible;
+.input-control .error {
+  color: #ff3860;
+  font-size: 11px;
+  height: 3px;
+  text-align: center;
 }
-
 
 
 

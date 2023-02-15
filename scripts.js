@@ -1,22 +1,23 @@
 
-// Signup form validation
+// ====================Signup form validation===================
 
-document.querySelector(".button").onclick = function (e) {
-  e.preventDefault();
-  var password = document.querySelector("#passwordUp").value,
-    confirmpassword = document.querySelector("#passwordConf").value;
-  var logEmailUp = document.getElementById("logEmailUp").value;
+// document.querySelector(".button").onclick = function (e) {
+//   e.preventDefault();
+//   var password = document.querySelector("#passwordUp").value,
+//     confirmpassword = document.querySelector("#passwordConf").value;
+//   var logEmailUp = document.getElementById("logEmailUp").value;
 
-  if (password == "") {
-    swal("NOT YET!", "Please fill out every field!", "info");
-  } else if (password != confirmpassword) {
-    swal("OOpS!", "The passwords don't match.", "error");
-    return false;
-  } else if (password == confirmpassword) {
-    swal("WELL DONE!", "You can now login with your credentials.", "success");
-  }
-  return true;
-};
+//   if (password == "") {
+//     swal("NOT YET!", "Please fill out every field!", "info");
+//   } else if (password != confirmpassword) {
+//     swal("OOpS!", "The passwords don't match.", "error");
+//     return false;
+//   } else if (password == confirmpassword) {
+//     swal("WELL DONE!", "You can now login with your credentials.", "success");
+//   }
+//   return true;
+// };
+
 
 
 //================ Add post section===========================
@@ -95,11 +96,6 @@ function onDelete(td){
   resetForm();
   }
 }
-
-
-
-
-
 
 
 
