@@ -25,10 +25,7 @@ sendBtn.addEventListener('click',(e)=>{
     let email=document.getElementById('email');
     let fromWhere=document.getElementById('about');
     let message=document.getElementById('comments');
-    if(theName.value==='' || email.value===''|| fromWhere.value===''|| message.value=-=''){
-        alert("fill every field");
-        
-    }
+ 
 
     // set value and local storage
     theName=theName.value;
