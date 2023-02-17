@@ -32,7 +32,8 @@
       <a href="login.html" class="login">Login</a>
     </header>
     <div class="title"><h1>LOGIN</h1></div>
-    <form id="loginForm" class="loginForm" action="adminHome.html" method="get">
+    <!-- lgin form -->
+    <div id="loginForm" class="loginForm"  >
       <input
         id="logEmail"
         type="email"
@@ -47,89 +48,22 @@
         placeholder="password"
         required
       />
-      <a href="adminHome.html"
-        ><input id="sending" class="sending" type="submit" name="login" value="LOGIN"
+      <a><input id="sending" class="sending" type="submit" name="login" value="LOGIN"
       /></a>
-    </form>
+    </div>
+    <!-- id="signUp"
+          onclick="document.getElementById('model-wrapper').style.display='block'" -->
     <div id="noAccount">
       <h6>
         Don't have an account?<a
-          id="signUp"
-          onclick="document.getElementById('model-wrapper').style.display='block'"
-        >
+          
+        href="signup.html">
           SignUp</a
         >
       </h6>
-    </div>
+    </div>    
 
-    <!-- popUp model -->
-
-    <div id="model-wrapper" class="bgModel">
-      <div class="modelContent">
-        <div class="close">
-          <a href="login.html">+</a>
-        </div>
-        <h1 id="signupTitle">Sign up</h1>
-        <a id="google" href=""> Sign up with Google</a>
-        <a id="facebook" href="">Sign up with Facebook</a>
-        <div id="or"><h6>-OR-</h6></div>
-
-        <form id="form" class="form">
-          <div class="input-control">
-            <input id="fname" type="text" name="name" placeholder="Full name" />
-            <div class="error"></div>
-          </div>
-
-          <div class="input-control">
-            <input
-              id="logEmailUp"
-              type="text"
-              name="email"
-              placeholder="Email address"
-            />
-            <div class="error"></div>
-          </div>
-
-          <div class="input-control">
-            <input
-              id="passwordUp"
-              type="password"
-              name="password"
-              placeholder="Password"
-              
-            />
-            <div class="error"></div>
-          </div>
-
-          <div class="input-control">
-            <input
-              id="passwordConf"
-              type="password"
-              name="passwordConf"
-              placeholder="Confirm your password"
-              
-            />
-            <div class="error"></div>
-          </div>
-
-          <input
-            class="button"
-            id="sendingUp"
-            type="submit"
-            name="create"
-            value="Create account"
-          />
-
-          
-        </form><div id="haveAccount">
-          <h4>Already have an account?<a href="" id="haveSign"> Login</a></h4>
-        </div>
-
-      </div>
-    </div>
-
-
-    <script defer src="signup.js"></script>
+    <script defer src="login.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

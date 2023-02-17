@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet " href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="profile.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+
+      <nav>
+        <ul class="navBar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+          <li><a href="contactMe.html">Contact me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="myWork.html">My work</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="login">Log out</a>
+    </header>
+    <!-- search -->
+    <div>
+      <input id="search" type="search" placeholder="search" />
+    </div>
+    <!-- <h2 id="h2">ANALYTICS</h2> -->
+
+    <!-- flexbox -->
+    <div class="adminFlex">
+      <div class="adminContent">
+        <div class="adminColumns col11">
+          <div class="leftTable">
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-chart-simple"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="adminHome.html"><p>Stats</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-plus"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="addPost.html"><p>Add post</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-list-check"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="managePost.html"><p>Manage post</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-user-plus"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="addUser.html"><p>Add user</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-users"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="manageUsers.html"><p>Manage users</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-bars-progress"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="manageCategories.html"><p>Categories</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-envelope-open-text"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="messages.html"><p>Messages</p></a>
+              </div>
+            </div>
+            <div class="leftBox">
+              <div class="leftCell">
+                <p><i class="fa-solid fa-delete-left"></i></p>
+              </div>
+              <div class="leftCell">
+                <a href="recentlyDeleted.html"><p>Recently deleted</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right table -->
+        
+
+        <div class="class sidebar">
+            <li class="user">Create Order</li>
+            <li class="user">My Orders</li>
+            <li class="admin">All Orders</li>
+            <li class="admin" id="all-users">All Users</li>
+            <li class="vendor">View My Stcok</li>
+            <li class="admin">View Stcok</li>
+          </div>
+          <div class="main">
+            <h3 id="title"></h3>
+            <ul id="item-list"></ul>
+          </div>
+          <!-- <div class="right profile">
+            <h1>User Profile</h1>
+            <img src="https://res.cloudinary.com/kukuer/image/upload/v1657148964/uploaded_from_widget/aoejgt3yawrzsdlltgoy.png" alt="profile pic" >
+          </div> -->
+          <script src="profile.js"></script>
+        </body>
+        </html>
+      
+    </div>
+
+
+  </body>
+</html>

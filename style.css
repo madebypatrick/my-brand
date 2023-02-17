@@ -426,10 +426,10 @@ footer {
   height: 100%;
   position: absolute;
   top: 0;
-  display: none;
+  /* display: none; */
   padding: 11% 0 0 35%;
   align-items: center;
-  display: none;
+  /* display: none; */
   top: 0;
   width: 100%;
   height: 100%;
@@ -1064,3 +1064,30 @@ padding-left: 200px;
     
   }
 
+/* ============================Profile page=============== */
+
+
+.sidebar li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.sidebar {
+  width: 20vw;
+  box-shadow: grey 2px 2px;
+  padding-bottom: 2vh;
+  min-height: 10vh;
+}
+
+.profile {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main {
+  width: 60vw;
+  position: absolute;
+  left: 22vw;
+  top: auto;
+}

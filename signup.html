@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet " href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+
+      <nav>
+        <ul class="navBar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+          <li><a href="contactMe.html">Contact me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="myWork.html">My work</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="login">Login</a>
+    </header>   
+
+    <!-- popUp model -->
+
+    <div id="model-wrapper" class="bgModel">
+      <div class="modelContent">
+        <div class="close">
+          <a href="login.html">+</a>
+        </div>
+        <h1 id="signupTitle">Sign up</h1>
+        <a id="google" href=""> Sign up with Google</a>
+        <a id="facebook" href="">Sign up with Facebook</a>
+        <div id="or"><h6>-OR-</h6></div>
+
+
+<!-- signUp form -->
+        <div id="form" class="form">
+          <div class="input-control">
+            <input id="fname" type="text" name="name" placeholder="Full name" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <input
+              id="logEmailUp"
+              type="text"
+              name="email"
+              placeholder="Email address"
+            />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <input
+              id="passwordUp"
+              type="password"
+              name="password"
+              placeholder="Password"
+              
+            />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control">
+            <input
+              id="passwordConf"
+              type="password"
+              name="passwordConf"
+              placeholder="Confirm your password"
+              
+            />
+            <div class="error"></div>
+          </div>
+
+          <input
+            class="button"
+            id="sendingUp"
+            type="submit"
+            name="create"
+            value="Create account"
+          />
+
+          
+        </div><div id="haveAccount">
+          <h4>Already have an account?<a href="login.html" id="haveSign"> Login</a></h4>
+        </div>
+
+      </div>
+    </div>
+
+
+    <script defer src="signup.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>
