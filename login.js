@@ -31,7 +31,8 @@ function signIn() {
     
   } else {
     // user doesn't exist
-    alert('not registered, go to signup?');
+    swal("NOT REGISTERED!", "Please Create a new account!", "error");
+  
     window.location.href = 'signup.html';
   }
 }
