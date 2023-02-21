@@ -22,9 +22,9 @@ function showData() {
     html +=
       '<td><button onclick="deleteData(' +
       index +
-      ')" class="btn btn-danger">Delete</button><button onclick="updateData(' +
+      ')" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button><button onclick="updateData(' +
       index +
-      ')" class="btn btn-warning m-2">Edit</button></td>';
+      ')" class="btn btn-warning m-2"><i class="fa-solid fa-pen-to-square"></i></button></td>';
     html += "</tr>";
   });
 
