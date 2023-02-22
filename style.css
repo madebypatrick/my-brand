@@ -982,6 +982,7 @@ width:fixed;
 .container{
   margin-left: 200px;
   padding-top: 40px;
+  width: 40%;
 }
 
 
@@ -993,6 +994,10 @@ padding-left: 180px;
 .container textarea{
   width: 90%;
   height: 70px;
+  }
+
+  #crudTable{
+    width: 35vw;
   }
 
   /* =======================Dashboard Home============================= */

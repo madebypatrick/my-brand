@@ -27,7 +27,7 @@ function signIn() {
     localStorage.setItem('currentUser', JSON.stringify(targetUser))
     window.location.href = "adminHome.html";
   } else if(targetUser && targetUser.password != password.value) {
-    swal("NOT YET!", "Please ferify your credentials!", "error");
+    swal("NOT YET!", "Please verify your credentials!", "error");
     
   } else {
     // user doesn't exist

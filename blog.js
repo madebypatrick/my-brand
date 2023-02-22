@@ -1,5 +1,5 @@
 const blogSection = document.querySelector(".gridItem1");
-const blogsDetails = JSON.parse(localStorage.getItem("peopleList")) || [];
+const blogsDetails = JSON.parse(localStorage.getItem("postList")) || [];
 // console.log(blogsDetails);
 
 blogsDetails.forEach((item, index) => {
