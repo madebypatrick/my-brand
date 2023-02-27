@@ -14,7 +14,6 @@ var post = document.getElementById('post');
 
 var imgUrl;
 
-var addBlogBtn = document.querySelector('#btn-success');
 
 
 // Save Blog Button Functionality
@@ -33,7 +32,6 @@ if (localStorage.getItem("postList") != null) {
 
 function registrationData(){
     postList.push({
-                                                               //Latest update
         blogImage: imgUrl == undefined ? "images/logo for add-blog-image.jpeg" : imgUrl,
         title: title.value,
         category: category.value,
@@ -41,7 +39,7 @@ function registrationData(){
 
         post: post.value
     });
-    console.log(postList);
+    // console.log(postList);
     var blogsString = JSON.stringify(postList);
     localStorage.setItem("postList", blogsString);
 }
@@ -54,7 +52,7 @@ const AddData = () =>{
     postList.forEach((data,index)=>{
         // console.log(index)
         tableData.innerHTML += `
-            <tr index='${index}'> 
+            <tr> 
             <td>${data.title}</td>
             <td>${data.category}</td>
             <td>${data.date}</td>
@@ -65,8 +63,10 @@ const AddData = () =>{
                     <button class="delete-button-blogs del-btn">Delete</button> 
                 </td>
             </tr>
-        `;
-    })
+        `
+    });
+}
+document.onload=AddData();
 
 
     //Deleting blogs from the t-body
@@ -94,11 +94,7 @@ const AddData = () =>{
             var td = tr.getElementsByTagName("TD");
             var index = tr.getAttribute("index");
 
-            // var imgTag1 = td[1].getElementsByTagName("IMG");
-            // var blogImage1 = imgTag1[0].src;
-            // var author1 = td[2].innerHTML;
-            // var title1 = td[3].innerHTML;
-            // var body1 = td[4].innerHTML;
+            
 
 
             var imgTag1 = td[4].getElementsByTagName("IMG");
@@ -107,24 +103,13 @@ const AddData = () =>{
             var date1 = td[3].innerHTML;
             var blogImage1 = imgTag1[0].src;
             var post1 = td[5].innerHTML;
-           
-
-
-// ====================================================back
 
             
-            addBlogBtn.click();
+     
             
             saveBlogBtn.disabled = true;
             updateBtn.disabled = false;
-// ====================================================back
 
-
-
-            // author.value = author1;
-            // title.value = title1;
-            // body.value = body1;
-            // blogImage.src = blogImage1;
 
             title.value=title1
             category.value=category1
@@ -153,8 +138,8 @@ const AddData = () =>{
         }
     }
         
-}
 AddData();
+
 
 
 //Image Accessing and Processing
