@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOGIN</title>
-    <link rel="stylesheet " href="style.css" />
+        <link rel="stylesheet " href="./Assets/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -27,19 +28,21 @@
           <li><a href="skills.html">Skills</a></li>
           <li><a href="myWork.html">My work</a></li>
           <li><a href="blog.html">Blog</a></li>
+          
         </ul>
       </nav>
       <a href="login.html" class="login">Login</a>
     </header>
     <div class="title"><h1>LOGIN</h1></div>
     <!-- lgin form -->
-    <div id="loginForm" class="loginForm"  >
+    <form id="loginForm" class="loginForm"  >
       <input
         id="logEmail"
         type="email"
         name="email"
         placeholder="Email address"
         required
+        
       />
       <input
         id="password"
@@ -47,10 +50,11 @@
         name="password"
         placeholder="password"
         required
+        
       />
       <a><input id="sending" class="sending" type="submit" name="login" value="LOGIN"
       /></a>
-    </div>
+      </form>
     <!-- id="signUp"
           onclick="document.getElementById('model-wrapper').style.display='block'" -->
     <div id="noAccount">
@@ -63,7 +67,7 @@
       </h6>
     </div>    
 
-    <script defer src="login.js"></script>
+    <script defer src="./Assets/login.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

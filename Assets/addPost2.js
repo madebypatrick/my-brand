@@ -93,13 +93,6 @@ function registrationData(){
     //Deleting blogs from the t-body
 
 
-
-
-
-
-
-
-
     var deleteButtons = document.querySelectorAll(".del-btn");
         for(var i = 0; i < deleteButtons.length; i++){
             deleteButtons[i].onclick = function(){

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet " href="style.css" />
+        <link rel="stylesheet " href="../Assets/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -13,30 +14,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="scripts.js"></script>
   </head>
   <body>
     <header>
-      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+      <a href="../index.html"><img src="../images/logo.png" alt="" class="logo" /></a>
 
       <nav>
         <ul class="navBar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutMe.html">About me</a></li>
-          <li><a href="contactMe.html">Contact me</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="myWork.html">My work</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../aboutMe.html">About me</a></li>
+          <li><a href="../contactMe.html">Contact me</a></li>
+          <li><a href="../skills.html">Skills</a></li>
+          <li><a href="../myWork.html">My work</a></li>
+          <li><a href="../blog.html">Blog</a></li>
         </ul>
       </nav>
-      <a href="index.html" class="login">Log out</a>
+      <a href="../login.html" class="login">Log out</a>
     </header>
     <!-- search -->
     <div>
     <input id="search" type="search" placeholder="search">
     
   </div>
-  <h2 id="h2">MANAGE POSTS</h2>
+  <h2 id="h2">MANAGE USERS</h2>
 
     <!-- flexbox -->
     <div class="adminFlex">
@@ -123,27 +123,35 @@
           <div class="tableBox">
             <div class="tableRow tableHead">
               <div class="tableCell">
-                <p>Post</p>
+                <p>Name</p>
               </div>
               <div class="tableCell">
-                <p>Publisher</p>
+                <p>Access</p>
               </div>
-              <div class="tableCell">
-                <p>publish</p>
-              </div>
+              
               <div class="tableCell">
                 <p>Delete</p>
               </div>
             </div>
             <div class="tableRow">
               <div class="tableCell">
-                <p>Lorem, ipsum dolor.</p>
+                <p>John Smith</p>
               </div>
+              <div class="tableCell">
+                <p>Admin</p>
+              </div>
+              
+              
+              <div class="tableCell lastCell">
+                <p><i class="fa-solid fa-trash-can"></i></p>
+              </div>
+            </div>
+            <div class="tableRow">
               <div class="tableCell">
                 <p>John Smith</p>
               </div>
               <div class="tableCell">
-                <p><i class="fa-solid fa-upload"></i></p>
+                <p>Visitor</p>
               </div>
               
               <div class="tableCell lastCell">
@@ -152,75 +160,49 @@
             </div>
             <div class="tableRow">
               <div class="tableCell">
-                <p>Lorem, ipsum dolor.</p>
-              </div>
-              <div class="tableCell">
                 <p>John Smith</p>
               </div>
               <div class="tableCell">
-                <p><i class="fa-solid fa-upload"></i></p>
+                <p>Admin</p>
               </div>
+              
               <div class="tableCell lastCell">
                 <p><i class="fa-solid fa-trash-can"></i></p>
               </div>
             </div>
             <div class="tableRow">
               <div class="tableCell">
-                <p>Lorem, ipsum dolor.</p>
-
-              </div>
-              <div class="tableCell">
                 <p>John Smith</p>
               </div>
               <div class="tableCell">
-                <p><i class="fa-solid fa-upload"></i></p>
+                <p>Publisher</p>
               </div>
+              
               <div class="tableCell lastCell">
                 <p><i class="fa-solid fa-trash-can"></i></p>
               </div>
             </div>
             <div class="tableRow">
               <div class="tableCell">
-                <p>Lorem, ipsum dolor.</p>
-
-              </div>
-              <div class="tableCell">
                 <p>John Smith</p>
               </div>
               <div class="tableCell">
-                <p><i class="fa-solid fa-upload"></i></p>
+                <p>Publisher</p>
               </div>
+              
               <div class="tableCell lastCell">
                 <p><i class="fa-solid fa-trash-can"></i></p>
               </div>
             </div>
             <div class="tableRow">
               <div class="tableCell">
-                <p>Lorem, ipsum dolor.</p>
-
-              </div>
-              <div class="tableCell">
                 <p>John Smith</p>
-              </div>
-              <div class="tableCell">
-                <p><i class="fa-solid fa-upload"></i></p>
-              </div>
-              <div class="tableCell lastCell">
-                <p><i class="fa-solid fa-trash-can"></i></p>
-              </div>
-            </div>
-            <div class="tableRow">
-              <div class="tableCell">
-                <p>Lorem, ipsum dolor.</p>
-
               </div>
               
               <div class="tableCell">
-                <p>John Smith</p>
+                <p>Visitor</p>
               </div>
-              <div class="tableCell">
-                <p><i class="fa-solid fa-upload"></i></p>
-              </div>
+              
 
               <div class="tableCell lastCell">
                 <p><i class="fa-solid fa-trash-can"></i></p>
@@ -231,11 +213,6 @@
       </div>
     </div>
 
-    <!-- <footer>
-            <div class="socials">
-                <a href="https://github.com/madebypatrick" target="_blank"><i class="fa-brands fa-github" ></i></a>
-                <a href="https://www.linkedin.com/in/patrick-mugwaneza-56034a245" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-           </div>
-        </footer> -->
+    <script src="../Assets/scripts.js"></script>
   </body>
 </html>

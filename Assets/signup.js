@@ -80,6 +80,10 @@
 // =================Local Storage============================
 
 // identify forminput field values by time of clicking submit
+
+
+
+
 const nameField = document.getElementById('fname');
 const emailField = document.getElementById('logEmailUp');
 const password = document.getElementById('passwordUp');

@@ -6,7 +6,7 @@ blogsDetails.forEach((item, index) => {
     blogSection.insertAdjacentHTML('afterbegin',`
     <img class="gridBoxImage" src="${item.uploadImage}">              
             <h6>${item.category}</h6>
-        <a href="machineLearning1.html">
+        <a href="../Blog/machineLearning1.html">
           <p>${item.title}</p></a>
 
         <p>${item.date}</p>       
