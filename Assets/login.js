@@ -96,9 +96,8 @@ fetch('https://api-mybrand.cyclic.app/api/v1/login',{
             }
             return user;
         })
-        .catch((error) => {
+        .catch((error) => alert(error));
           
-        console.error('Error:"', error);})
 
 });
 
