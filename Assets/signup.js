@@ -82,33 +82,68 @@
 // identify forminput field values by time of clicking submit
 
 
+// worked before///////////////////////////////
 
 
-const nameField = document.getElementById('fname');
-const emailField = document.getElementById('logEmailUp');
-const password = document.getElementById('passwordUp');
-const role = document.getElementById('role');
-// signup button
-const signup = document.getElementById('sendingUp');
 
 
-users = JSON.parse(localStorage.getItem('users')) || [];
 
-function saveUser() {
-  let user = {};
-  user.firstName = nameField.value.split(' ')[0];
-  user.lastName = nameField.value.split(' ')[1];
-  user.email = emailField.value
-  user.password = password.value
-  users.push(user);
-  const stringUsers = JSON.stringify(users);
-  localStorage.setItem('users', stringUsers);
-}
+// const nameField = document.getElementById('fname');
+// const emailField = document.getElementById('logEmailUp');
+// const password = document.getElementById('passwordUp');
+// const role = document.getElementById('role');
+// // signup button
+// const signup = document.getElementById('sendingUp');
 
-function displayUsers() {
-  users.forEach((user, index) => {
-    listUsers.innerHTML += `<li>user number ${index} is ${user.firstName} ${user.lastName}</li>`
-  })
-}
 
-signup.onclick = saveUser;
+// users = JSON.parse(localStorage.getItem('users')) || [];
+
+// function saveUser() {
+//   let user = {};
+//   user.firstName = nameField.value.split(' ')[0];
+//   user.lastName = nameField.value.split(' ')[1];
+//   user.email = emailField.value
+//   user.password = password.value
+//   users.push(user);
+//   const stringUsers = JSON.stringify(users);
+//   localStorage.setItem('users', stringUsers);
+// }
+
+// function displayUsers() {
+//   users.forEach((user, index) => {
+//     listUsers.innerHTML += `<li>user number ${index} is ${user.firstName} ${user.lastName}</li>`
+//   })
+// }
+
+// signup.onclick = saveUser;
+
+
+
+
+
+
+
+
+const form =document.getElementById('form');
+
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+const fullname = document.getElementById('fname').value;
+const email = document.getElementById('logEmailUp').value;
+const password = document.getElementById('passwordUp').value;
+const data = { fullname, email, password };
+fetch('https://api-mybrand.cyclic.app/api/v1/signup',{
+  method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+        .then((resp) => {
+            return resp.json();
+        })
+        .then((data) => {
+            alert(data.message);
+        })
+        .catch((error) => alert(error));
+});
