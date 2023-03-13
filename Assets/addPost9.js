@@ -46,8 +46,8 @@ form.addEventListener('submit', (event) =>{
             return response.json();
 
         })
-        .then((Data) => {
-            console.log(Data)
+        .then((data) => {
+          swal("Well done!", data.message, "success");
           })
           .then(resp => {
         }).catch(err => console.log(err))
