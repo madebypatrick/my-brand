@@ -280,9 +280,11 @@ footer {
 .conCol1 .col-1-3 #comments {
   background-color: white;
   font-size: 18px;
-  min-width: 70%;
-  max-width: 500px;
+  min-width: 90%;
+  max-width: 100px;
+  /* max-width: 500px; */
   min-height: 80px;
+  max-height: 150px;
   border: 1px solid grey;
   margin: 10px 0;
   border-radius: 5px;
@@ -734,8 +736,8 @@ font-size: 18px;
 /* ===========================Blog======================== */
 .gridContainer{
   display: grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-auto-rows: minmax(250px, auto);
+  grid-template-columns:1fr 1fr ;
+  grid-auto-rows: minmax(25px, auto);
   grid-gap: 10px;
   padding: 15px 65px 0 65px;
   text-align: left;
@@ -775,41 +777,6 @@ font-size: 18px;
     width: 100%;
   }
 
-.gridItem2{
-  /* background-image: url(https://images.unsplash.com/photo-1526378722484-bd91ca387e72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60); */
-  background-size: cover;
-  padding-top: 40%;
-  padding-left: 20px;
-
-}
-.gridItem3{
-  /* background-image: url(https://images.unsplash.com/photo-1505424297051-c3ad50b055ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwtZ1hMcGQ4X1RhSXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60); */
-  background-size: cover;
-  padding-top: 40%;
-  padding-left: 20px;
-  
-}
-.gridItem4{
-  /* background-image: url(https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHwtZ1hMcGQ4X1RhSXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60); */
-  background-size: cover;
-  padding-top: 40%;
-  padding-left: 20px;
-
-}
-.gridItem5{
-  /* background-image: url(https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YXJ0aWZpY2lhbCUyMGludGVsbGlnZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60); */
-  background-size: cover;
-  padding-top: 40%;
-  padding-left: 20px;
-
-}
-.gridItem6{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  box-shadow: 10px -3px 15px grey;
-
-
-}
 .gridItem6 p{
   grid-column: span 2;
   padding-top: 50px 0 10px 0 ;
@@ -841,7 +808,14 @@ font-size: 18px;
   margin-left: 20px;
 }
 
-
+.blogTitle,.blogContent,.blogAuthor{
+  padding-top:300px ;
+  text-align: left;
+  margin-left: -610px;
+}
+.blogAuthor{
+  padding-top: 200px;
+}
 
 
 /* ==============Skills page================= */
@@ -967,7 +941,7 @@ input[type="text"],input[type="url"],input[type="email"]{
   border-radius: 4px;
 }
 
-#submit , #update{
+#submitBlog , #update{
   background:#b9bbae;
   padding:6px 12px;
   margin:15px 0 10px;
@@ -979,7 +953,7 @@ input[type="text"],input[type="url"],input[type="email"]{
   outline: none;
 }
 
-#submit:hover , #update:hover{
+#submitBlog:hover , #update:hover{
   background-color: rgb(255, 255, 255);
   filter: drop-shadow(5px 6px 1px #b9bbae);
 }
@@ -1097,3 +1071,58 @@ padding-left: 180px;
   left: 22vw;
   top: auto;
 }
+
+
+
+/* --------------Messages from contact me page------------ */
+.message-table  {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-collapse: collapse;
+  margin-left: 150px;
+}
+
+.message-table th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.message-table th {
+  background-color:rgb(6, 88, 109);
+  font-weight: bold;
+}
+
+.message-table td {
+  border-bottom: 1px solid  #ddd;
+}
+
+/* --------------Newsletter from contact blogs page------------ */
+.news-table  {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-collapse: collapse;
+  margin-left: 250px;
+}
+
+.news-table  th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+.news-table  th {
+  background-color:rgb(6, 88, 109);
+  font-weight: bold;
+}
+
+.news-table td {
+  border-bottom: 1px solid  #ddd;
+}
+

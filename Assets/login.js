@@ -29,7 +29,7 @@
 
 //   if(targetUser && targetUser.password == password.value) {
 //     localStorage.setItem('currentUser', JSON.stringify(targetUser))
-//     window.location.href = "../Admin/adminHome.html";
+//     window.location.href = "../Admin/addPost.html";
 //   } else if(targetUser && targetUser.password != password.value) {
 //     swal("NOT YET!", "Please verify your credentials!", "error");
     
@@ -88,7 +88,7 @@ fetch('https://api-mybrand.cyclic.app/api/v1/login',{
       // set our token in Localstorage
       localStorage.setItem("token", user.token)
       localStorage.setItem('currentUser', user.data.email);
-      location.href= "./Admin/adminHome.html";
+      location.href= "./Admin/addPost.html";
 
             } else {
 

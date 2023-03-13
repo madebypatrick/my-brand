@@ -27,16 +27,16 @@
           <li><a href="../skills.html">Skills</a></li>
           <li><a href="../myWork.html">My work</a></li>
           <li><a href="../blog.html">Blog</a></li>
+          <li><a href="/my-brand/Admin/addPost.html">Blog</a></li>
         </ul>
       </nav>
       <a href="../login.html" class="login">Log out</a>
     </header>
     <!-- search -->
     <div>
-    <input id="search" type="search" placeholder="search">
-    
-  </div>
-  <h2 id="h2">MANAGE POSTS</h2>
+      <input id="search" type="search" placeholder="search" />
+    </div>
+    <h2 id="h2">MESSAGES</h2>
 
     <!-- flexbox -->
     <div class="adminFlex">
@@ -50,7 +50,6 @@
               </div>
               <div class="leftCell">
                 <a href="addPost.html"><p>Add post</p></a>
-                
               </div>
             </div>
             <div class="leftBox">
@@ -58,19 +57,17 @@
                 <p><i class="fa-solid fa-list-check"></i></p>
               </div>
               <div class="leftCell">
-                
                 <a href="managePost.html"><p>Manage post</p></a>
               </div>
             </div>
-                
-             
-             <div class="leftBox">
+               
+              
+               <div class="leftBox">
               <div class="leftCell">
                 <p><i class="fa-solid fa-newspaper"></i></p>
               </div>
               <div class="leftCell">
-                
-                <a href="  newsLetter.html"><p>NewsLetter</p></a>
+                <a href="  newsLetter.html"><p>Newsletter</p></a>
               </div>
             </div>
             <div class="leftBox">
@@ -78,40 +75,33 @@
                 <p><i class="fa-solid fa-envelope-open-text"></i></p>
               </div>
               <div class="leftCell">
-                
                 <a href="messages.html"><p>Messages</p></a>
               </div>
             </div>
-             
+               
           </div>
         </div>
 
         <!-- right table -->
-
-        <div class="adminColumns col22">
-          <div class="row mt-5">
-            <div class="col-12">
-              <table class="listing" id="crudTable">
-                <thead>
-                  <tr>
-                    <!-- <th>Index</th> -->
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Author</th>
-                    <th>Image</th>
-                    <th>Post</th>
-                    
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody id="table-data"></tbody>
-              </table>
-            </div>
-          </div>
+<!-- hello -->
+        <div class="adminColumns ">
+          <table class="message-table" id="message-table">
+            <thead>
+              <tr>
+                <th>Full name</th>
+                <th>Email address</th>
+                <th>From</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          
         </div>
       </div>
     </div>
 
-    <script defer src="../Assets/addPost0.js"></script>
+    <script defer src="../Assets/messages.js"></script>
   </body>
 </html>

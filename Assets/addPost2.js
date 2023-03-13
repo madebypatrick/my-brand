@@ -1,10 +1,10 @@
-
+// alert("hello")
 //=================Global Variables==================
 var allInput = document.querySelectorAll("input");
 var allTextarea = document.querySelectorAll("textarea");
 var postList = [];
 var uploadImage = document.querySelector("#linkList").src;
-var saveBlogBtn = document.querySelector('#submit');
+var saveBlogBtn = document.querySelector('#submitBlog');
 var updateBtn = document.querySelector('#update');
 var title = document.getElementById('title');
 var category = document.getElementById('category');
@@ -90,6 +90,11 @@ function registrationData(){
 
 
 
+
+
+
+
+
     //Deleting blogs from the t-body
 
 
@@ -109,9 +114,9 @@ function registrationData(){
         }
 
 
-    //Edit || Update your standby blog
+    //Edit || Update the blog
     function updateArticle(index) {
-        document.getElementById("submit").style.display = "none";
+        document.getElementById("submitBlog").style.display = "none";
         document.getElementById("update").style.display = "block";
     
         var postList;
@@ -142,7 +147,7 @@ function registrationData(){
                 document.getElementById("date").value = "";
                 document.getElementById("linkList").src = "";
                 document.getElementById("post").value = "";
-                document.getElementById("submit").style.display = "block";
+                document.getElementById("submitBlog").style.display = "block";
                 document.getElementById("update").style.display = "none";
             
     

@@ -14,6 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
   </head>
   <body>
     <header>
@@ -36,7 +37,7 @@
     <input id="search" type="search" placeholder="search">
     
   </div>
-  <h2 id="h2">MANAGE POSTS</h2>
+  <h2 id="h2">NEWSLETTER</h2>
 
     <!-- flexbox -->
     <div class="adminFlex">
@@ -88,30 +89,21 @@
 
         <!-- right table -->
 
-        <div class="adminColumns col22">
-          <div class="row mt-5">
-            <div class="col-12">
-              <table class="listing" id="crudTable">
-                <thead>
-                  <tr>
-                    <!-- <th>Index</th> -->
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Author</th>
-                    <th>Image</th>
-                    <th>Post</th>
-                    
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody id="table-data"></tbody>
-              </table>
-            </div>
-          </div>
+        <div class="adminColumns ">
+          <table class="news-table" id="news-table">
+            <thead>
+              <tr>
+                <th>Email address</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
 
-    <script defer src="../Assets/addPost0.js"></script>
+    <script src="../Assets/newsLetter.js"></script>
   </body>
 </html>
