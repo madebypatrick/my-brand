@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLOGS</title>
-        <link rel="stylesheet " href="./Assets/style.css" />
+    <link rel="stylesheet " href="./Assets/style.css" />
 
     <link
       rel="stylesheet"
@@ -31,43 +31,34 @@
       </nav>
       <a href="login.html" class="login">Login</a>
     </header>
-   
+
     <div class="title"><h1>BLOGS</h1></div>
 
     <div class="gridContainer">
-      <div class="gridItem gridItem1">
+      <!-- BLOGS SECTION -->
+    </div>
+    <div>
+      <div class="leftSide">
+        <h3>Sign up for our news letter</h3>
+        <p>A daily roundup of the best stories from Patrick’s</p>
       </div>
-      <div class="gridItem gridItem2">
-        
+      <div class="rightSide">
+        <form id="newsLetter">
+          <input
+            id="newsEmail"
+            type="email"
+            placeholder="Email required"
+            required
+          /><br />
+          <input id="send" type="submit" value="SUBSCRIBE" />
+        </form>
       </div>
-      <div class="gridItem gridItem3">
-        
-      </div>
-      <div class="gridItem gridItem4">
-        
-      </div>
-      <div class="gridItem gridItem5">
-       
-      </div>
-      <div class="gridItem gridItem6">
-        <div class="leftSide">
-          <h3>Sign up for our news letter</h3>
-          <p>A daily roundup of the best stories from Patrick’s</p>
-        </div>
-        <div class="rightSide">
-          <form id="newsLetter">
-            <input id="newsEmail" type="email" placeholder="Email required" required ><br />
-            <input id="send" type="submit" value="SUBSCRIBE" >
-          </form>
-        </div>
-        <p>
-          By submitting your email, you agree to our Terms and Privacy Notice.
-          You can opt out at any time.
-        </p>
-      </div>
+      <p>
+        By submitting your email, you agree to our Terms and Privacy Notice. You
+        can opt out at any time.
+      </p>
     </div>
     <script defer src="./Assets/blog.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
   </body>
 </html>

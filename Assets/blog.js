@@ -1,25 +1,3 @@
-// const blogSection = document.querySelector(".gridItem1");
-// const blogsDetails = JSON.parse(localStorage.getItem("postList")) || [];
-// // console.log(blogsDetails);
-
-// blogsDetails.forEach((item, index) => {
-//     blogSection.insertAdjacentHTML('afterbegin',`
-//     <img class="gridBoxImage" src="${item.image}">              
-//             <h6>${item.category}</h6>
-//         <a href="./Blog/machineLearning1.html">
-//           <p>${item.title}</p></a>
-
-//         <p>${item.date}</p>       
-                    
-//         `)
-// });
-
-
-
-// <img src="${item.uploadImage}"></img>
-
-
-
 const form = document.getElementById("newsLetter");
 
 // add event listener to the form
@@ -80,14 +58,26 @@ fetchBlogs()
             gridItem.insertAdjacentHTML(
                 'afterbegin',
                 `
-                <img class="gridBoxImage" src="${item.image}">
-          <p class="blogTitle">${item.title}</p>
-            <h6>${item.category}</h6>
-        <a href="/.html=?${item.id}">
-          <p class="blogAuthor">${item.author}</p>
-         
+                
+
+
+          <div class="blogPost">
+          <a href="./Blog/singleBlog.html" class="rd-more">
+          <div class="blogImage">
+          <img src="${item.image}"></img>
+          </div>
+          <div class="blogContents">
+              <p class="blogCategory">${item.category}</p>
+              <p class="blogTitle">${item.title}</p>
+              <p class="blogAuthor">${item.author} . ${item.date}</p>
+              
+          </div></a>
+          </div>
+        
 
 
             `)
         });
     })
+
+    
