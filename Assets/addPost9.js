@@ -35,7 +35,7 @@ form.addEventListener('submit', (event) =>{
     formData.append('content', content);
     data={title,category,author,image,content}
     console.log(data)
-            fetch('http://localhost:3000/api/v1/blogs', {
+            fetch('https://api-mybrand.cyclic.app/api/v1/blogs', {
             method: 'POST',
             headers: {
                 'Authorization': token,
@@ -67,15 +67,15 @@ fetch("https://api-mybrand.cyclic.app/api/v1/blogs")
             blogTable.insertAdjacentHTML(
                 'afterbegin',
                 ` 
-        <tr>
+        <tr id="blog-${blog._id}">
         
         <td>${blog.title}</td>
         <td>${blog.category}</td>
         <td>${blog.author}</td>
         <td><img id="linkList" src="${blog.image}" alt="" width="50" height="50"></td>
         <td>${blog.content} </td>
-        <td><button onclick="deleteBlog(${blog.id})" class="delete-button">Delete</button>
-        <button onclick="updateArticle(${blog.id})" class="edit-button">Edit</button></td>
+        <td><button onclick="deleteBlog('${blog._id}')" class="delete-button">Delete</button>
+        <button onclick="updateArticle('${blog._id}')" class="edit-button">Edit</button></td>
         </tr>
       `,
             )
@@ -83,27 +83,91 @@ fetch("https://api-mybrand.cyclic.app/api/v1/blogs")
   })
 
   .catch((err) => alert(err));
-// <td>${id+1}</td> 
-
-
-// delete a blog
+ 
+// ==================================delete the blog==========================
 
 function deleteBlog(id) {
-    var ans = confirm('Are you sure you want to delete this blog?');
-    if (ans == true) {
-      fetch(`https://api-mybrand.cyclic.app/api/v1/blogs/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'content-type': 'application/json'
-        },
+  console.log(id);
+  var ans = confirm('Are you sure you want to delete this blog?');
+  if (ans == true) {
+    fetch(`https://api-mybrand.cyclic.app/api/v1/blogs/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        location.reload();
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          location.reload();
-        })
-        .catch((err) => {
-          alert(err);
-        });
-    }
+      .catch((err) => {
+        alert(err);
+      });
   }
+}
+
+
+
+// ================================update the blog===================
+// function updateArticle(id) {
+
+//   try {
+//     console.log(id)
+//     fetch(`http://127.0.0.1:3000/api/v1/blogs/${id}`);
+//     image.style.display = 'block';
+//     image.src = res.data.image;
+
+//     title.value = res.data.title;
+//     category.value = res.data.category;
+//     author.value = res.data.author;
+//     content.value = res.data.content;
+//     saveBlogBtn.disabled = true;
+//     updateBtn.disabled = false;
+//     localStorage.setItem('blogToEdit', id);
+//   } catch (error) {
+//     console.log('Error getting Blog: ', error.message);
+//   }
+// };
+
+// const editBlog = async (title, author, body, imageUrl) => {
+//   var _id = localStorage.getItem('blogToEdit');
+//   var title = document.getElementById('titleInput').value;
+//   var author = document.getElementById('authorInput').value;
+//   var body = document.getElementById('bodyTextarea').value;
+//   var imageUrl = imgUrl;
+//   try {
+//     // let id;
+//     const response = await fetch(
+//       `http://127.0.0.1:7000/api/v1/blogs/${_id}`,
+//       {
+//         method: 'PUT',
+//         headers: {
+//           'content-type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//           title: title,
+//           author: author,
+//           body: body,
+//           imageUrl,
+//         }),
+//       },
+//     );
+//     const data = await response.json();
+//     if (data) {
+//       location.reload();
+//     } else {
+//       console.log('Error editing blog', error);
+//     }
+//   } catch (error) {
+//     console.log('Error editing blog: ', error.message);
+//   }
+// };
+
+// // updateBtn.onclick = () => {
+// //   const title = document.getElementById('titleInput').value;
+// //   const author = document.getElementById('authorInput').value;
+// //   const body = document.getElementById('bodyTextarea').value;
+// //   const imageUrl = imgUrl;
+// //   editBlog(title, author, body, imageUrl);
+// // };

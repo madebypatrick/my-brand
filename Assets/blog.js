@@ -29,13 +29,13 @@ form.addEventListener("submit", (event) => {
   // alert(data.message)
   // console.log(data);
 
-  swal("Thank you!", data.message, "success");
+  swal("Thank you!", data.message, "success").then(() => {
+    location.reload();})
   }
  })
 });
 
 // ---------------------------blog display----------------
-
 const gridItem = document.querySelector(".gridContainer");
 const fetchBlogs = async() => {
     try {
@@ -62,14 +62,14 @@ fetchBlogs()
 
 
           <div class="blogPost">
-          <a href="./Blog/singleBlog.html" class="rd-more">
+          <a href="./Blog/viewBlog.html?id=${item._id}">
           <div class="blogImage">
           <img src="${item.image}"></img>
           </div>
           <div class="blogContents">
               <p class="blogCategory">${item.category}</p>
               <p class="blogTitle">${item.title}</p>
-              <p class="blogAuthor">${item.author} . ${item.date}</p>
+              <p class="blogAuthor">${item.author} . ${item.createdAt}</p>
               
           </div></a>
           </div>
