@@ -54,8 +54,14 @@ const fetchBlogs = async() => {
 fetchBlogs()
     .then((res) => {
         console.log(res);
+        
         res.data.forEach((item, index) => {
+            const date = new Date(item.createdAt);
+  const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric',  hour: 'numeric',minute: 'numeric',
+  hour12: false });
             gridItem.insertAdjacentHTML(
+
+                
                 'afterbegin',
                 `
                 
@@ -69,7 +75,7 @@ fetchBlogs()
           <div class="blogContents">
               <p class="blogCategory">${item.category}</p>
               <p class="blogTitle">${item.title}</p>
-              <p class="blogAuthor">${item.author} . ${item.createdAt}</p>
+              <p class="blogAuthor">${item.author} . ${formattedDate}</p>
               
           </div></a>
           </div>

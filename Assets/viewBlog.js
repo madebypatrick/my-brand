@@ -21,11 +21,15 @@ const fetchBlog = async () => {
 
 fetchBlog().then((res) => {
   console.log(res);
+  
+  const date = new Date(res.data.createdAt);
+  const formattedDate = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric',  hour: 'numeric',minute: 'numeric',
+  hour12: false });
 
   blogPostSingle.innerHTML = `
   <div class="viewBlogContents">
   <h1 class="blogTitleSingle">${res.data.title}</h1>
-  <p class="blogAuthorSingle">By: ${res.data.author} | ${res.data.createdAt}</p>
+  <p class="blogAuthorSingle">By: ${res.data.author} | ${formattedDate}</p>
   <p class="blogCategorySingle">${res.data.category}</p>
 
       <div class="blogImageSingle">
@@ -33,7 +37,8 @@ fetchBlog().then((res) => {
       </div>
       
         
-        <p class="blogContentSingle">${res.data.content}</p>
+        <pre style="white-space: pre-wrap;" class="blogContentSingle">${res.data.content}</pre>
+
         </div>
      
   `;

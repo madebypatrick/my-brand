@@ -792,6 +792,7 @@ padding-bottom: 10px;
  .viewBlogContents{
    margin:0 75px;
   padding-top: 40px; 
+ 
 
 }
 .blogImageSingle img{
@@ -824,6 +825,8 @@ padding-bottom: 10px;
 .blogContentSingle{
   width: 70%;
   padding:20px 0px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight:600;
 }
 #blogIntro{
   width: 60%;
@@ -837,12 +840,15 @@ padding-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 } 
-#blogComment{
-  width: 100%;
+#blogComment {
   padding: 12px 20px;
   margin: 0px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  max-height: 56px;
+  min-width: 100%;
+  max-width: 100%;
+
 }
 #commentButton{
   width: 15%;
@@ -858,6 +864,7 @@ padding-bottom: 10px;
 #displayBlogComment{
   margin:0 75px;
   padding: 3px 30px;
+  min-width: 30px;
 }
 #displayBlogComment p{
   padding: 20px 0px;
@@ -975,15 +982,40 @@ width: 50%;
 
 
 #addPostForm input[type="text"],input[type="url"],input[type="email"]{
-  width:90%;
+  width:100%;
   padding:12px 20px;
   margin:8px 0;
   display: inline-block;
   border: 1px solid rgb(165,161,161);
   border-radius: 4px;
 }
+
+#updatePostForm input[type="text"],input[type="select"],input[type="email"]{
+  width:400px;
+  padding:12px 20px;
+  margin:8px 0;
+  display: inline-block;
+  border: 1px solid rgb(165,161,161);
+  border-radius: 4px;
+}
+
+#updatePostForm textarea{
+  width: 400px;
+  height: 70px;
+  }
+
+    
+  #updatePostForm .category{
+    width:400px;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+  }
+
 .category{
-  width:90%;
+  width:100%;
   padding:12px 20px;
   margin:8px 0;
   display: inline-block;
@@ -1001,8 +1033,8 @@ width: 50%;
 
 #submitBlog , #update{
   background:#b9bbae;
-  padding:6px 12px;
-  margin:15px 0 10px;
+  padding:6px 50px;
+  margin:15px 0 10px 100px;
   display: inline-block;
   border: none;
   border-radius: 30px;
@@ -1016,7 +1048,7 @@ width: 50%;
   filter: drop-shadow(5px 6px 1px #b9bbae);
 }
 
-.container{
+.mb-5{
   margin-left: 200px;
   padding-top: 40px;
   width: 40%;
@@ -1024,14 +1056,67 @@ width: 50%;
 
 
 
-.container label{
+.mb-5 label{
 padding-left: 180px;
 /* color: red; */
 }
-.container textarea{
-  width: 90%;
+.mb-5 textarea{
+  width: 100%;
   height: 70px;
   }
+
+  #addPostForm textarea {
+    white-space: pre-wrap;
+  }
+
+
+/* displaying the blog */
+#crudTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#crudTable th, #crudTable td {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  text-align: left;
+}
+
+#crudTable tbody tr {
+  height: 50px; /* adjust the value as needed */
+}
+
+#crudTable tbody td {
+  max-width: 200px; /* adjust the value as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.delete-button{
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.edit-button{
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+
+
+
+
+
+
 
 
 

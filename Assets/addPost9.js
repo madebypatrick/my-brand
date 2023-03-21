@@ -47,10 +47,10 @@ form.addEventListener('submit', (event) =>{
 
         })
         .then((data) => {
-          swal("Well done!", data.message, "success");
-          })
-          .then(resp => {
-        }).catch(err => console.log(err))
+          swal("Well done!", data.message, "success").then(() => {
+            location.reload();
+          });
+          }).catch(err => console.log(err))
 
 
    
@@ -74,8 +74,8 @@ fetch("https://api-mybrand.cyclic.app/api/v1/blogs")
         <td>${blog.author}</td>
         <td><img id="linkList" src="${blog.image}" alt="" width="50" height="50"></td>
         <td>${blog.content} </td>
-        <td><button onclick="deleteBlog('${blog._id}')" class="delete-button">Delete</button>
-        <button onclick="updateArticle('${blog._id}')" class="edit-button">Edit</button></td>
+        <td> <button onclick="makeUpdate('${blog._id}')" class="edit-button">Edit</button>   <button onclick="deleteBlog('${blog._id}')" class="delete-button">Delete</button>
+       </td>
         </tr>
       `,
             )
@@ -88,8 +88,21 @@ fetch("https://api-mybrand.cyclic.app/api/v1/blogs")
 
 function deleteBlog(id) {
   console.log(id);
-  var ans = confirm('Are you sure you want to delete this blog?');
-  if (ans == true) {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: 'You want to delete this blog',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+
+
+
+  // var ans = confirm('Are you sure you want to delete this blog?');
+  // if (ans == true) {
     fetch(`https://api-mybrand.cyclic.app/api/v1/blogs/${id}`, {
       method: 'DELETE',
       headers: {
@@ -105,69 +118,19 @@ function deleteBlog(id) {
         alert(err);
       });
   }
+})
+}
+
+// ================================update the blog===================
+
+
+function makeUpdate(id){
+  var blogId = id;
+      sessionStorage.setItem("blogIdKey", blogId);
+
+        window.location = './updatePost.html'
 }
 
 
 
-// ================================update the blog===================
-// function updateArticle(id) {
 
-//   try {
-//     console.log(id)
-//     fetch(`http://127.0.0.1:3000/api/v1/blogs/${id}`);
-//     image.style.display = 'block';
-//     image.src = res.data.image;
-
-//     title.value = res.data.title;
-//     category.value = res.data.category;
-//     author.value = res.data.author;
-//     content.value = res.data.content;
-//     saveBlogBtn.disabled = true;
-//     updateBtn.disabled = false;
-//     localStorage.setItem('blogToEdit', id);
-//   } catch (error) {
-//     console.log('Error getting Blog: ', error.message);
-//   }
-// };
-
-// const editBlog = async (title, author, body, imageUrl) => {
-//   var _id = localStorage.getItem('blogToEdit');
-//   var title = document.getElementById('titleInput').value;
-//   var author = document.getElementById('authorInput').value;
-//   var body = document.getElementById('bodyTextarea').value;
-//   var imageUrl = imgUrl;
-//   try {
-//     // let id;
-//     const response = await fetch(
-//       `http://127.0.0.1:7000/api/v1/blogs/${_id}`,
-//       {
-//         method: 'PUT',
-//         headers: {
-//           'content-type': 'application/json'
-//         },
-//         body: JSON.stringify({
-//           title: title,
-//           author: author,
-//           body: body,
-//           imageUrl,
-//         }),
-//       },
-//     );
-//     const data = await response.json();
-//     if (data) {
-//       location.reload();
-//     } else {
-//       console.log('Error editing blog', error);
-//     }
-//   } catch (error) {
-//     console.log('Error editing blog: ', error.message);
-//   }
-// };
-
-// // updateBtn.onclick = () => {
-// //   const title = document.getElementById('titleInput').value;
-// //   const author = document.getElementById('authorInput').value;
-// //   const body = document.getElementById('bodyTextarea').value;
-// //   const imageUrl = imgUrl;
-// //   editBlog(title, author, body, imageUrl);
-// // };

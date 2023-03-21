@@ -39,7 +39,7 @@
     <div>
       <input id="search" type="search" placeholder="search" />
     </div>
-    <h2 id="h2">ADD a POST</h2>
+    <h2 id="h2">EDIT a POST</h2>
 
     <!-- flexbox -->
     <div class="adminFlex">
@@ -89,7 +89,7 @@
     <div class="container">
       
       <div class="mb-5">
-        <form class="row" id="addPostForm">
+        <form class="row" id="updatePostForm">
           
           <div class="form-group col-md6 mb-3">
             <label for="title">Title</label><br />
@@ -147,16 +147,15 @@
               placeholder="e.g: Machine Learning and Augmented Reality"></textarea>
           </div>
           <div class="col-lg-12 mt-5">
-            <button type="submit" class="btn btn-success" id="submitBlog" >
+            <!-- <button type="submit" class="btn btn-success" id="submitBlog" >
               POST
-            </button>
-            <!-- <button type="submit" class="btn btn-primary" id="update" >Update</button> -->
+            </button> -->
+            <button type="submit" class="btn btn-primary" id="update" >Update</button>
           </div>
         </div>
       </form>
-    </div>
       <hr />
-      <div class="row mt-5">
+      <!-- <div class="row mt-5">
         <div class="col-12">
           <table class="listing" id="crudTable">
             <thead>
@@ -173,14 +172,12 @@
             <tbody id="table-data"></tbody>
           </table>
         </div>
-      </div>
+      </div> -->
+    </div>
     
     
-    
-    <script defer src="../Assets/addPost9.js"></script>
+    <script defer src="../Assets/updatePost.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 
   </body>
 </html>
