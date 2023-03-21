@@ -47,7 +47,7 @@ form.addEventListener('submit', (event) =>{
 
         })
         .then((data) => {
-          swal("Well done!", data.message, "success").then(() => {
+          Swal.fire("Well done!", data.message, "success").then(() => {
             location.reload();
           });
           }).catch(err => console.log(err))
