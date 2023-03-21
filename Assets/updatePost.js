@@ -3,7 +3,7 @@ var blogKeyId = sessionStorage.getItem("blogIdKey");
 showDataToUpdate(blogKeyId);
 
 function showDataToUpdate(blogKey){
-    fetch(`http://127.0.0.1:3000/api/v1/blogs/${blogKey}`)
+    fetch(`https://api-mybrand.cyclic.app/api/v1/blogs/${blogKey}`)
     .then((response) => response.json())
     .then((blogs)=>{
       
@@ -58,7 +58,7 @@ forms.addEventListener('submit', e =>{
     const data={title:titleValue,category:categoryValue,content:contentValue,author:authorValue,image:imageValue};
        console.log(data);
 
-       fetch(`http://127.0.0.1:3000/api/v1/blogs/${blogKeyId}`,{
+       fetch(`https://api-mybrand.cyclic.app/api/v1/blogs/${blogKeyId}`,{
 
        method:"PUT",
        headers:{
