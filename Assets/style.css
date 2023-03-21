@@ -849,6 +849,7 @@ padding-bottom: 10px;
   min-width: 100%;
   max-width: 100%;
 
+
 }
 #commentButton{
   width: 15%;
@@ -865,11 +866,14 @@ padding-bottom: 10px;
   margin:0 75px;
   padding: 3px 30px;
   min-width: 30px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight:400;
 }
 #displayBlogComment p{
   padding: 20px 0px;
   text-decoration: underline;
   margin-left: 300px;
+  
 }
 .comment-table{
   width:70%;
