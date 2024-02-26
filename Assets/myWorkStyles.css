@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  background-color: #f6f5f1;
+  min-height: 100vh;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 0;
+}
+/* Anchor styles */
+a {
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  justify-content: space-between;
+  padding: 30px 70px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  width: 250px;
+  max-width: 100%;
+}
+
+/* Navigation styles */
+.navBar {
+  list-style: none;
+  display: flex;
+  margin-top: -20px;
+}
+
+.navBar li {
+  display: inline-block;
+  padding: 0 10px;
+  font-family: "Roboto Flex", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-right: 20px;
+}
+
+.navBar li a {
+  transition: 0.3s;
+  color: black;
+}
+
+.navBar li a:hover {
+  color: #2a3512;
+  opacity: 30%;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+/* Styles for GitHub icon */
+#github {
+  height: 50px;
+}
+
+/* Styles for social icons */
+.socials {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands {
+  margin-right: 20px;
+  color: black;
+}
+
+/* Styles for toggle menu */
+.toggle-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-menu span {
+  background: #000;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  display: block;
+}
+
+.toggle-menu.active span:nth-child(1) {
+  transform: rotate(-135deg) translate(-5px, -6px);
+}
+
+.toggle-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-menu.active span:nth-child(3) {
+  transform: rotate(135deg) translate(-5px, 6px);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1087px) {
+  /* Adjust font size for smaller screens */
+  body {
+    font-size: 12px;
+  }
+
+  /* Adjust header layout for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Display navigation menu vertically on smaller screens */
+  .navBar {
+    display: none;
+    flex-direction: column;
+    width: 20%;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(185, 187, 174, 0.9);
+    z-index: 1;
+    margin-top: 20px;
+    gap: 20px;
+    right: 20px;
+    padding: 15px 0px;
+    border-radius: 5px;
+  }
+
+  /* Display navigation menu when active */
+  .navBar.show {
+    display: flex;
+  }
+
+  /* Align navigation items to right */
+  .navBar li {
+    text-align: right;
+    margin: 0;
+    color: white;
+  }
+
+  /* Display toggle menu */
+  .toggle-menu {
+    display: flex;
+  }
+}
+.title h1 {
+  color: #b9bbae;
+  text-decoration: underline;
+  text-align: center;
+}
+/* ========================================My work================================= */
+
+.workFlex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.wcol1 {
+  margin: 0 auto;
+}
+.wcol2 {
+  margin: 0 auto;
+}
+.wcol1 img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+}
+.wcol2 img {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+}
+#p1,
+#p2 {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 5px;
+  text-shadow: 1px 3px 3px grey;
+}

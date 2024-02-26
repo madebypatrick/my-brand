@@ -1,149 +1,181 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   const form = document.getElementById("form");
 
-// ===============Validate signup form=======================
+//   form.addEventListener("submit", async (e) => {
+//     e.preventDefault();
 
+//     const fullname = document.getElementById("fname").value.trim();
+//     const email = document.getElementById("logEmailUp").value.trim();
+//     const password = document.getElementById("passwordUp").value;
+//     const passwordConf = document.getElementById("passwordConf").value;
 
+//     const fullnameError = document.getElementById("fname-error");
+//     const emailError = document.getElementById("email-error");
+//     const passwordError = document.getElementById("password-error");
+//     const passwordConfError = document.getElementById("passwordConf-error");
 
+//     fullnameError.textContent = "";
+//     emailError.textContent = "";
+//     passwordError.textContent = "";
+//     passwordConfError.textContent = "";
 
-// const form=document.getElementById('form');
-// const fname=document.getElementById('fname');
-// const email=document.getElementById('logEmailUp');
-// const password1=document.getElementById('passwordUp');
-// const password2=document.getElementById('passwordConf');
+//     if (!fullname) {
+//       fullnameError.textContent = "Please fill out this field";
+//       return;
+//     }
 
-// form.addEventListener('submit', e => {
-//   e.preventDefault();
+//     if (!email) {
+//       emailError.textContent = "Please fill out this field";
+//       return;
+//     }
 
-//   validateInputs();
+//     if (!password) {
+//       passwordError.textContent = "Please fill out this field";
+//       return;
+//     }
+
+//     if (!passwordConf) {
+//       passwordConfError.textContent = "Please fill out this field";
+//       return;
+//     }
+
+//     if (password !== passwordConf) {
+//       passwordConfError.textContent = "Passwords do not match";
+//       return;
+//     }
+
+//     if (!isValidEmail(email)) {
+//       emailError.textContent = "Please enter a valid email address";
+//       return;
+//     }
+
+//     if (!isValidPassword(password)) {
+//       passwordError.textContent =
+//         "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character";
+//       return;
+//     }
+
+//     const data = { fullname, email, password };
+//     try {
+//       const response = await fetch("https://api-mybrand-bnww.onrender.com/api/v1/signup", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       });
+//       const responseData = await response.json();
+//       swal("Welcome!", "Login to use the app!", "success");
+
+//     } catch (error) {
+//       console.error(error);
+//       alert("An error occurred. Please try again later.");
+//     }
+//   });
+
+//   function isValidEmail(email) {
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return emailRegex.test(email);
+//   }
+
+//   function isValidPassword(password) {
+//     const passwordRegex =
+//       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+//     return passwordRegex.test(password);
+//   }
 // });
 
 
-// const setError=(element, message)=>{
-//   const inputControl = element.parentElement;
-//   const errorDisplay =inputControl.querySelector('.error');
-//   errorDisplay.innerText = message;
-//   inputControl.classList.add('error');
-//   inputControl.classList.remove('success');
 
-// }
-// const setSuccess=element =>{
-//   const inputControl=element.parentElement;
-//   const errorDisplay=inputControl.querySelector('.error');
-// errorDisplay.innerText='';
-// inputControl.classList.add('success');
-// inputControl.classList.remove('error');
-// };
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
 
-// const isValidEmail=email =>{
-//   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(String(email).toLowerCase());
-// }
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-// const validateInputs=()=>{
-//   const fnameValue=fname.value.trim();
-//   const emailValue=email.value.trim();
-//   const password1Value=password1.value.trim();
-//   const password2Value=password2.value.trim();
-//   if(fnameValue===''){
-//     setError(fname,'Full name is required');
+    const fullname = document.getElementById("fname").value.trim();
+    const email = document.getElementById("logEmailUp").value.trim();
+    const password = document.getElementById("passwordUp").value;
+    const passwordConf = document.getElementById("passwordConf").value;
 
-//   }else{
-//     setSuccess(fname);
+    const fullnameError = document.getElementById("fname-error");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+    const passwordConfError = document.getElementById("passwordConf-error");
 
-//   }
-//   if(emailValue===''){
-//     setError(email,'Email is required');
-//   }else if (!isValidEmail(emailValue)){
-//     setError(email, 'Provide a valid email address');
+    fullnameError.textContent = "";
+    emailError.textContent = "";
+    passwordError.textContent = "";
+    passwordConfError.textContent = "";
 
-//   }else{
-//     setSuccess(email);
-//   }
-//   if(password1Value===''){
-//     setError(password1,"Password is required");
-//   }else if(password1Value.length<6){
-//     setError(password1,'Password must be at least 6 characters');
-//   }else{
-//     setSuccess(password1);
-//   }
-//   if(password2Value===''){
-//     setError(password2,'Please confirm your password');
-//   }else if(password2Value !== password1Value){
-//     setError(password2,"Passwords don't match");
-//   }else{
-//     setSuccess(password2);
-//   }
+    if (!fullname) {
+      fullnameError.textContent = "Please fill out this field";
+      return;
+    }
 
-// };
+    if (!email) {
+      emailError.textContent = "Please fill out this field";
+      return;
+    }
 
+    if (!password) {
+      passwordError.textContent = "Please fill out this field";
+      return;
+    }
 
+    if (!passwordConf) {
+      passwordConfError.textContent = "Please fill out this field";
+      return;
+    }
 
-// =================Local Storage============================
+    if (password !== passwordConf) {
+      passwordConfError.textContent = "Passwords do not match";
+      return;
+    }
 
-// identify forminput field values by time of clicking submit
+    if (!isValidEmail(email)) {
+      emailError.textContent = "Please enter a valid email address";
+      return;
+    }
 
+    if (!isValidPassword(password)) {
+      passwordError.textContent =
+        "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character";
+      return;
+    }
 
-// worked before///////////////////////////////
-
-
-
-
-
-// const nameField = document.getElementById('fname');
-// const emailField = document.getElementById('logEmailUp');
-// const password = document.getElementById('passwordUp');
-// const role = document.getElementById('role');
-// // signup button
-// const signup = document.getElementById('sendingUp');
-
-
-// users = JSON.parse(localStorage.getItem('users')) || [];
-
-// function saveUser() {
-//   let user = {};
-//   user.firstName = nameField.value.split(' ')[0];
-//   user.lastName = nameField.value.split(' ')[1];
-//   user.email = emailField.value
-//   user.password = password.value
-//   users.push(user);
-//   const stringUsers = JSON.stringify(users);
-//   localStorage.setItem('users', stringUsers);
-// }
-
-// function displayUsers() {
-//   users.forEach((user, index) => {
-//     listUsers.innerHTML += `<li>user number ${index} is ${user.firstName} ${user.lastName}</li>`
-//   })
-// }
-
-// signup.onclick = saveUser;
-
-
-
-
-
-
-
-
-const form =document.getElementById('form');
-
-form.addEventListener('submit',(e)=>{
-  e.preventDefault();
-const fullname = document.getElementById('fname').value;
-const email = document.getElementById('logEmailUp').value;
-const password = document.getElementById('passwordUp').value;
-const data = { fullname, email, password };
-fetch('https://api-mybrand.cyclic.app/api/v1/signup',{
-  method: "POST",
+    const data = { fullname, email, password };
+    try {
+      const response = await fetch("https://api-mybrand-bnww.onrender.com/api/v1/signup", {
+        method: "POST",
         headers: {
-            "Content-Type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
-    })
-        .then((resp) => {
-            return resp.json();
-        })
-        .then((data) => {
-            alert(data.message);
-        })
-        .catch((error) => alert(error));
+      });
+      const responseData = await response.json();
+      if (response.ok) {
+        swal("Welcome!", "Login to use the app!", "success")
+          .then(() => {
+            window.location.href = "login.html";
+          });
+      } else {
+        swal("Error", responseData.message || "Failed to sign up", "error");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred. Please try again later.");
+    }
+  });
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function isValidPassword(password) {
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password);
+  }
 });

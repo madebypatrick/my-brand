@@ -1,5 +1,5 @@
 const newsLetterTable = document.getElementById("news-table");
-fetch("https://api-mybrand.cyclic.app/api/v1/newsLetter")
+fetch("https://api-mybrand-bnww.onrender.com/api/v1/newsLetter")
   .then((response) => response.json())
   .then((newsLetters) => {
     console.log(newsLetters);

@@ -1,0 +1,288 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  background-color: #f6f5f1;
+  min-height: 100vh;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 0;
+}
+/* Anchor styles */
+a {
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  justify-content: space-between;
+  padding: 30px 70px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  width: 250px;
+  max-width: 100%;
+}
+
+/* Navigation styles */
+.navBar {
+  list-style: none;
+  display: flex;
+  margin-top: -20px;
+}
+
+.navBar li {
+  display: inline-block;
+  padding: 0 10px;
+  font-family: "Roboto Flex", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-right: 20px;
+}
+
+.navBar li a {
+  transition: 0.3s;
+  color: black;
+}
+
+.navBar li a:hover {
+  color: #2a3512;
+  opacity: 30%;
+}
+
+/* Styles for GitHub icon */
+#github {
+  height: 50px;
+}
+
+/* Styles for social icons */
+.socials {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands {
+  margin-right: 20px;
+  color: black;
+}
+
+/* Styles for toggle menu */
+.toggle-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-menu span {
+  background: #000;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  display: block;
+}
+
+.toggle-menu.active span:nth-child(1) {
+  transform: rotate(-135deg) translate(-5px, -6px);
+}
+
+.toggle-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-menu.active span:nth-child(3) {
+  transform: rotate(135deg) translate(-5px, 6px);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1087px) {
+  /* Adjust font size for smaller screens */
+  body {
+    font-size: 12px;
+  }
+
+  /* Adjust header layout for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Display navigation menu vertically on smaller screens */
+  .navBar {
+    display: none;
+    flex-direction: column;
+    width: 20%;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(185, 187, 174, 0.9);
+    z-index: 1;
+    margin-top: 20px;
+    gap: 20px;
+    right: 20px;
+    padding: 15px 0px;
+    border-radius: 5px;
+  }
+
+  /* Display navigation menu when active */
+  .navBar.show {
+    display: flex;
+  }
+
+  /* Align navigation items to right */
+  .navBar li {
+    text-align: right;
+    margin: 0;
+    color: white;
+  }
+
+  /* Display toggle menu */
+  .toggle-menu {
+    display: flex;
+  }
+}
+
+/* ----------------------------------- */
+.title h1 {
+  color: #b9bbae;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* ======================Contact me page================================ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 40px;
+  width: 60%;
+}
+
+.form-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#send {
+  background-color: #b9bbae;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 100;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: auto;
+}
+
+#send:hover {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  padding: 20px 0px;
+}
+
+.leftSide {
+  width: 50%;
+}
+
+.rightSide {
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+#formTitle h5 {
+  text-align: left;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.rightSide p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  text-shadow: 2px 5px 2px grey;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .leftSide,
+  .rightSide {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+    width: 100%;
+  }
+  textarea {
+    min-height: 100px;
+    max-width: 100%;
+    min-width: 90%;
+  }
+}
