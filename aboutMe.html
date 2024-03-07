@@ -5,11 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About me</title>
-    <link rel="stylesheet " href="./Assets/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <link rel="stylesheet " href="./Assets/aboutStyles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
 
     <link
       rel="stylesheet"
@@ -22,45 +36,59 @@
   <body>
     <header>
       <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
-    
-    <nav>
-      <ul class="navBar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutMe.html">About me</a></li>
-        <li><a href="contactMe.html">Contact me</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="myWork.html">My work</a></li>
-        <li><a href="blog.html">Blogs</a></li>
-      </ul>
-    </nav>
-    <a href="login.html" class="login">Login</a>
-  </header>
-  <div class="title"><h1>ABOUT ME</h1></div>
-  
-  <div class="flexBox">
-    <div class="twoColumn">
-      <div class="column column1">
-        <p id="pAbId">I have built many applications and can do the same for you.</p>
-        <img
-              src="./images/-8o73ou.jpg"
-              alt="Patrick's portrait"
-            />
 
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav>
+        <ul class="navBar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMe.html">About me</a></li>
+          <li><a href="contactMe.html">Contact me</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="myWork.html">My work</a></li>
+          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="login.html" class="login">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="title"><h1>ABOUT ME</h1></div>
+
+    <div class="twoColumn">
+      <div class="column1">
+        <img src="./images/-8o73ou.jpg" alt="Patrick's portrait" />
       </div>
-      <div class="column column2">
-        <p id="pAbId">I am a certified computer and software engineer from the university of Rwanda.<br><br>
-          I have learned and used c, c++, java, and python.<br><br>
-          
-          I aim to help people quickly achieve their daily goals through creative technologies.</p>
-          
-        </div>
-      
-      <footer class="aboutFoot">
-          <div class="socials">
-            <a href="https://github.com/madebypatrick" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/patrick-mugwaneza-56034a245" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-       </div>
-      </footer>
-      
+      <div class="column2">
+        <p class="rightContent">
+          As a passionate Full Stack Software Engineer, I specialize in the MERN
+          stack, GraphQL, and PostgreSQL. My expertise lies in architecting
+          robust applications, and seamlessly merging precision in coding with
+          creative problem-solving.<br><br> I played a pivotal role in integrating
+          complex features, contributing significantly to the comprehensive
+          functionality of an e-commerce website. Demonstrating effective
+          communication and teamwork, I led a dynamic team, ensuring tight
+          project deadlines were met, and delivering a fully functional,
+          scalable e-commerce platform. <br><br>Excited to bring this wealth of
+          experience to new challenges, I am eager to collaborate on creating
+          impactful solutions. Let's connect and explore opportunities to
+          innovate together.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="socials">
+        <a href="https://github.com/madebypatrick" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/patrick-mugwaneza-56034a245"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="./Assets/index.js"></script>
   </body>
 </html>

@@ -5,11 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MY WORK</title>
-        <link rel="stylesheet " href="./Assets/style.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <link rel="stylesheet " href="./Assets/myWorkStyles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
 
     <link
       rel="stylesheet"
@@ -23,6 +37,12 @@
   <body>
     <header>
       <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul class="navBar">
           <li><a href="index.html">Home</a></li>
@@ -31,27 +51,64 @@
           <li><a href="skills.html">Skills</a></li>
           <li><a href="myWork.html">My work</a></li>
           <li><a href="blog.html">Blogs</a></li>
+          <li><a href="login.html" class="login">Login</a></li>
         </ul>
       </nav>
-      <a href="login.html" class="login">Login</a>
     </header>
     <div class="title"><h1>MY WORK</h1></div>
     <div class="workFlex">
-      <div class="workColumns">
-        <div class="wColumns wcol1"><img src="images\javaw_l1I7Nh8j85.png" alt="terni lapilli game">
-        <p id="p1">Coded in JAVA, terni lapilli is a two player video game developed in 2019.</p>
-        </div>
-        <div class="wColumns wcol2"><img src="images\msedge_6duzaWt1GF.png" alt="screenshot of nickellesalon.com">
-        <p id="p2">Powered by odoo framework, nickelle is a web application that helps people to schedule their hair care appointments.</p>
-        </div>        
+      <div class="wcol1">
+        <img src="images\msedge_vwmvLsPR6d.png" alt="screenshot of guessWho game" />
+        <p id="p1">
+          Test your ability to identify famous personalities in 15 seconds using
+          this app, built with Firebase, Next.js, and TypeScript.
+        </p>
+      </div>
+      <div class="wcol2">
+        <img
+          src="images\javaw_l1I7Nh8j85.png"
+          alt="screenshot of terni lapilli"
+        />
+        <p id="p2">
+          Coded in JAVA, terni lapilli is a two player video game developed in
+          2019.
+        </p>
+      </div>
+
+      <div class="wcol2">
+        <img
+          src="images\msedge_6duzaWt1GF.png"
+          alt="screenshot of nickellesalon.com"
+        />
+        <p id="p2">
+          Powered by odoo framework, nickelle is a web application that helps
+          people to schedule their hair care appointments.
+        </p>
+      </div>
+      <div class="wcol2">
+        <img
+          src="images\msedge_9KvN2lzc7T.png"
+          alt="screenshot of tech-titans e-commerce"
+        />
+        <p id="p2">
+          An e-commerce platform developed by a 12-person team using PostgreSQL,
+          NodeJS, and React.
+        </p>
       </div>
     </div>
 
     <footer>
       <div class="socials">
-          <a href="https://github.com/madebypatrick" target="_blank"><i class="fa-brands fa-github" ></i></a>
-          <a href="https://www.linkedin.com/in/patrick-mugwaneza-56034a245" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-     </div>
-  </footer>
+        <a href="https://github.com/madebypatrick" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/patrick-mugwaneza-56034a245"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="./Assets/index.js"></script>
   </body>
 </html>

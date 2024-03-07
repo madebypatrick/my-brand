@@ -5,11 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOGIN</title>
-        <link rel="stylesheet " href="./Assets/style.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
+    <link rel="stylesheet " href="./Assets/loginStyles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
 
     <link
       rel="stylesheet"
@@ -18,12 +32,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
   </head>
   <body>
     <header>
       <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
 
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul class="navBar">
           <li><a href="index.html">Home</a></li>
@@ -32,21 +50,19 @@
           <li><a href="skills.html">Skills</a></li>
           <li><a href="myWork.html">My work</a></li>
           <li><a href="blog.html">Blogs</a></li>
-          
+          <li><a href="login.html" class="login">Login</a></li>
         </ul>
       </nav>
-      <a href="login.html" class="login">Login</a>
     </header>
     <div class="title"><h1>LOGIN</h1></div>
     <!-- lgin form -->
-    <form id="loginForm" class="loginForm"  >
+    <form id="loginForm" class="loginForm">
       <input
         id="logEmail"
         type="email"
         name="email"
         placeholder="Email address"
         required
-        
       />
       <input
         id="password"
@@ -54,24 +70,23 @@
         name="password"
         placeholder="password"
         required
-        
       />
-      <a><input id="sending" class="sending" type="submit" name="login" value="LOGIN"
+      <a
+        ><input
+          id="sending"
+          class="sending"
+          type="submit"
+          name="login"
+          value="LOGIN"
       /></a>
-      </form>
-    <!-- id="signUp"
-          onclick="document.getElementById('model-wrapper').style.display='block'" -->
+    </form>
     <div id="noAccount">
-      <h6>
-        Don't have an account?<a
-          
-        href="signup.html">
-          SignUp</a
-        >
-      </h6>
-    </div>    
+      <h6>Don't have an account? <a href="signup.html">SignUp</a></h6>
+    </div>
 
     <script defer src="./Assets/login.js"></script>
+    <script src="./Assets/index.js"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

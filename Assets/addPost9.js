@@ -35,7 +35,7 @@ form.addEventListener('submit', (event) =>{
     formData.append('content', content);
     data={title,category,author,image,content}
     console.log(data)
-            fetch('https://api-mybrand.cyclic.app/api/v1/blogs', {
+            fetch('https://api-mybrand-bnww.onrender.com/api/v1/blogs', {
             method: 'POST',
             headers: {
                 'Authorization': token,
@@ -59,7 +59,7 @@ form.addEventListener('submit', (event) =>{
 
 // Display the Blogs into the table
 const blogTable = document.getElementById("crudTable");
-fetch("https://api-mybrand.cyclic.app/api/v1/blogs")
+fetch("https://api-mybrand-bnww.onrender.com/api/v1/blogs")
   .then((response) => response.json())
   .then((blogs) => {
     console.log(blogs);
@@ -103,7 +103,7 @@ function deleteBlog(id) {
 
   // var ans = confirm('Are you sure you want to delete this blog?');
   // if (ans == true) {
-    fetch(`https://api-mybrand.cyclic.app/api/v1/blogs/${id}`, {
+    fetch(`https://api-mybrand-bnww.onrender.com/api/v1/blogs/${id}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',

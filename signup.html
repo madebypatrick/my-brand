@@ -5,12 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LOGIN</title>
-        <link rel="stylesheet " href="./Assets/style.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./favicon_io/site.webmanifest">
-
+    <link rel="stylesheet" href="./Assets/signUpStyles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -18,12 +31,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
   </head>
   <body>
     <header>
       <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
 
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul class="navBar">
           <li><a href="index.html">Home</a></li>
@@ -32,39 +49,41 @@
           <li><a href="skills.html">Skills</a></li>
           <li><a href="myWork.html">My work</a></li>
           <li><a href="blog.html">Blogs</a></li>
+          <li><a href="login.html" class="login">Login</a></li>
         </ul>
       </nav>
-      <a href="login.html" class="login">Login</a>
-    </header>   
+    </header>
 
     <!-- popUp model -->
-
     <div id="model-wrapper" class="bgModel">
       <div class="modelContent">
         <div class="close">
           <a href="login.html">+</a>
         </div>
         <h1 id="signupTitle">Sign up</h1>
-        <a id="google" href=""> Sign up with Google</a>
-        <a id="facebook" href="">Sign up with Facebook</a>
-        <div id="or"><h6>-OR-</h6></div>
 
-
-<!-- signUp form -->
+        <!-- signUp form -->
         <form id="form" class="form">
           <div class="input-control">
-            <input id="fname" type="text" name="name" placeholder="Full name" />
-            <div class="error"></div>
+            <input
+              id="fname"
+              type="text"
+              name="name"
+              placeholder="Full name"
+              required
+            />
+            <div class="error" id="fname-error"></div>
           </div>
 
           <div class="input-control">
             <input
               id="logEmailUp"
-              type="text"
+              type="email"
               name="email"
               placeholder="Email address"
+              required
             />
-            <div class="error"></div>
+            <div class="error" id="email-error"></div>
           </div>
 
           <div class="input-control">
@@ -73,9 +92,9 @@
               type="password"
               name="password"
               placeholder="Password"
-              
+              required
             />
-            <div class="error"></div>
+            <div class="error" id="password-error"></div>
           </div>
 
           <div class="input-control">
@@ -84,29 +103,32 @@
               type="password"
               name="passwordConf"
               placeholder="Confirm your password"
-              
+              required
             />
-            <div class="error"></div>
+            <div class="error" id="passwordConf-error"></div>
           </div>
+          <div class="signUpButton">
+            <input
+              class="button"
+              id="sendingUp"
+              type="submit"
+              name="create"
+              value="Create account"
+            />
+          </div>
+        </form>
 
-          <input
-            class="button"
-            id="sendingUp"
-            type="submit"
-            name="create"
-            value="Create account"
-          />
-
-          
-        </form><div id="haveAccount">
-          <h4>Already have an account?<a href="login.html" id="haveSign"> Login</a></h4>
+        <div id="haveAccount">
+          <h4>
+            Already have an account?
+            <a href="login.html" id="haveSign">Login</a>
+          </h4>
         </div>
-
       </div>
     </div>
 
-
     <script defer src="./Assets/signup.js"></script>
+    <script src="./Assets/index.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
