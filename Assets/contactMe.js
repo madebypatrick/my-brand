@@ -53,7 +53,7 @@ form.addEventListener("submit", (event) => {
   console.log(data);
 
   // interaction with the API endpoint
- fetch('https://api-mybrand.cyclic.app/api/v1/message',
+ fetch('https://api-mybrand-bnww.onrender.com/api/v1/message',
  {
   method:"POST",
   headers:{

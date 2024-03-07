@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-        <link rel="stylesheet " href="../Assets/style.css" />
+        <link rel="stylesheet " href="../Assets/dashboardStyles.css" />
         <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
@@ -21,8 +21,15 @@
   </head>
   <body>
     <header>
-      <a href="../index.html"><img src="../images/logo.png" alt="" class="logo" /></a>
+      <a href="../index.html"
+        ><img src="../images/logo.png" alt="" class="logo"
+      /></a>
 
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul class="navBar">
           <li><a href="../index.html">Home</a></li>
@@ -31,9 +38,9 @@
           <li><a href="../skills.html">Skills</a></li>
           <li><a href="../myWork.html">My work</a></li>
           <li><a href="../blog.html">Blogs</a></li>
+          <li><a href="../login.html" class="login">Log out</a></li>
         </ul>
       </nav>
-      <a href="../login.html" class="login">Log out</a>
     </header>
     <!-- search -->
     <div>
@@ -55,14 +62,7 @@
                 <a href="addPost.html"><p>Add post</p></a>
               </div>
             </div>
-            <div class="leftBox">
-              <div class="leftCell">
-                <p><i class="fa-solid fa-list-check"></i></p>
-              </div>
-              <div class="leftCell">
-                <a href="managePost.html"><p>Manage post</p></a>
-              </div>
-            </div>
+            
                
               
                <div class="leftBox">

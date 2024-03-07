@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLOGS</title>
-    <link rel="stylesheet " href="./Assets/style.css" />
+    <link rel="stylesheet " href="./Assets/blogStyles.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
@@ -23,6 +23,11 @@
     <header>
       <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
 
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul class="navBar">
           <li><a href="index.html">Home</a></li>
@@ -31,13 +36,30 @@
           <li><a href="skills.html">Skills</a></li>
           <li><a href="myWork.html">My work</a></li>
           <li><a href="blog.html">Blogs</a></li>
+          <li><a href="login.html" class="login">Login</a></li>
         </ul>
       </nav>
-      <a href="login.html" class="login">Login</a>
     </header>
 
     <div class="title"><h1>BLOGS</h1></div>
-
+     <!-- Loading element -->
+     <div class="loader-overlay" id="loader-overlay">
+  <div class="loader" id="loader">
+    <!-- <h1>Loading...</h1> -->
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+    <div class="bar7"></div>
+    <div class="bar8"></div>
+    <div class="bar9"></div>
+    <div class="bar10"></div>
+    <div class="bar11"></div>
+    <div class="bar12"></div>
+  </div>
+</div>
     <div class="gridContainer">
       <!-- BLOGS SECTION -->
     </div>
@@ -54,7 +76,7 @@
             placeholder="Email required"
             required
           /><br />
-          <input id="send" type="submit" value="SUBSCRIBE" />
+          <input id="send" type="submit" value="STAY AHEAD" />
         </form>
       </div>
       <p>
@@ -63,6 +85,7 @@
       </p>
     </div>
     <script defer src="./Assets/blog.js"></script>
+    <script src="./Assets/index.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

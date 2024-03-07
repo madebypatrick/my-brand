@@ -1,5 +1,5 @@
 const messageTable = document.getElementById("message-table");
-fetch("https://api-mybrand.cyclic.app/api/v1/message")
+fetch("https://api-mybrand-bnww.onrender.com/api/v1/message")
   .then((response) => response.json())
   .then((messages) => {
     console.log(messages);

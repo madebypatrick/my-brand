@@ -1,0 +1,570 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quintessential&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400&display=swap");
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  background-color: #f6f5f1;
+  min-height: 100vh;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for footer */
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 10px 0;
+}
+/* Anchor styles */
+a {
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  justify-content: space-between;
+  padding: 30px 70px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  width: 250px;
+  max-width: 100%;
+}
+
+/* Navigation styles */
+.navBar {
+  list-style: none;
+  display: flex;
+  margin-top: -20px;
+}
+
+.navBar li {
+  display: inline-block;
+  padding: 0 10px;
+  font-family: "Roboto Flex", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-right: 20px;
+}
+
+.navBar li a {
+  transition: 0.3s;
+  color: black;
+}
+
+.navBar li a:hover {
+  color: #2a3512;
+  opacity: 30%;
+}
+
+/* Styles for GitHub icon */
+#github {
+  height: 50px;
+}
+
+/* Styles for social icons */
+.socials {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.fa-brands {
+  color: black;
+}
+
+/* Styles for toggle menu */
+.toggle-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-menu span {
+  background: #000;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  display: block;
+}
+
+.toggle-menu.active span:nth-child(1) {
+  transform: rotate(-135deg) translate(-5px, -6px);
+}
+
+.toggle-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle-menu.active span:nth-child(3) {
+  transform: rotate(135deg) translate(-5px, 6px);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 1096px) {
+  /* Adjust font size for smaller screens */
+  body {
+    font-size: 12px;
+  }
+
+  /* Adjust header layout for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Display navigation menu vertically on smaller screens */
+  .navBar {
+    display: none;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(185, 187, 174, 0.9);
+    z-index: 1;
+    margin-top: 20px;
+    gap: 10%;
+    right: 20px;
+    padding: 15px 0px;
+    border-radius: 5px;
+  }
+  /* Display navigation menu when active */
+  .navBar.show {
+    display: flex;
+  }
+
+  /* Align navigation items to right */
+  .navBar li {
+    text-align: right;
+    margin: 0;
+    color: white;
+    font-weight: 900;
+  }
+  /* Display toggle menu */
+  .toggle-menu {
+    display: flex;
+  }
+}
+/* =====================DASHBOARD===================== */
+
+.collection {
+  display: flex;
+  height: 50%;
+  margin: 0 5%;
+  padding: 30px 0;
+  justify-content: space-between;
+}
+.leftTable {
+  /* background-color: green; */
+  width: 20%;
+}
+.mb-5 {
+  width: 40%;
+  /* background-color: blue; */
+  box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  margin: 0 auto;
+}
+
+.form-group label {
+  text-align: center;
+}
+#addPostForm textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(165, 161, 161);
+  border-radius: 4px;
+  font-family: "Roboto Flex", sans-serif;
+  height: auto;
+  min-height: 90px;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+
+/* =====================tables=================== */
+
+.tableBox {
+  margin: 50px auto;
+  padding-left: 100px;
+}
+.tableRow {
+  display: table;
+  width: 80%;
+
+  margin: 10px auto;
+  font-family: sans-serif;
+  background: transparent;
+  padding: 12px 0;
+  color: #555;
+  font-size: 13px;
+  box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+}
+.tableCell {
+  display: table-cell;
+  width: 30%;
+  text-align: center;
+  pad: 4px 0;
+  border-right: 1px solid #d6d4d4;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+.fa-pen-to-square {
+  font-size: 25px;
+  cursor: pointer;
+}
+.fa-recycle,
+.fa-upload {
+  font-size: 25px;
+  cursor: pointer;
+}
+.fa-trash-can {
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
+.tableHead .tableCell {
+  background: rgb(96, 133, 143);
+  box-shadow: none;
+  color: white;
+  font-weight: 600;
+}
+.tableHead .tableCell {
+  border-right: none;
+}
+
+.lastCell {
+  border-right: none;
+}
+
+/* left side */
+.leftBox {
+  display: table;
+  width: 100%;
+  margin: 10px auto;
+  font-family: sans-serif;
+  background: transparent;
+  padding: 12px 0;
+  color: #555;
+  font-size: 13px;
+  box-shadow: 0 1px 4px 0 rgb(0, 0, 50, 0.3);
+}
+.leftCell {
+  display: table-cell;
+  width: 3%;
+  text-align: center;
+  pad: 4px 0;
+  /* border-right: 1px solid #d6d4d4; */
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.leftCell a {
+  text-decoration: none;
+  color: #555;
+}
+
+.leftBox:hover {
+  box-shadow: 4px 5px 10px black;
+}
+
+#h2 {
+  justify-content: center;
+  font-weight: 200;
+  color: rgb(6, 88, 109);
+  margin: 0 auto;
+}
+
+/* ===========================Add post====================== */
+
+#addPostForm input[type="text"],
+input[type="url"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 0;
+  display: inline-block;
+  border: 1px solid rgb(165, 161, 161);
+  border-radius: 4px;
+}
+
+#updatePostForm input[type="text"],
+input[type="select"],
+input[type="email"] {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(165, 161, 161);
+  border-radius: 4px;
+}
+
+#updatePostForm textarea {
+  width: 400px;
+  height: 70px;
+}
+
+#updatePostForm .category {
+  width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(165, 161, 161);
+  border-radius: 4px;
+}
+
+.category {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(165, 161, 161);
+  border-radius: 4px;
+}
+#date {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(165, 161, 161);
+  border-radius: 4px;
+}
+
+#submitBlog,
+#update {
+  background: #b9bbae;
+  padding: 6px 50px;
+  margin: 15px auto;
+  display: block;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+#submitBlog:hover,
+#update:hover {
+  background-color: rgb(255, 255, 255);
+  filter: drop-shadow(5px 6px 1px #b9bbae);
+}
+
+/* displaying the blog */
+.col-12{
+
+  padding: 20px 0;
+}
+#crudTable {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#crudTable th,
+#crudTable td {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+  text-align: left;
+}
+
+#crudTable tbody tr {
+  height: 50px; /* adjust the value as needed */
+}
+
+#crudTable tbody td {
+  max-width: 200px; /* adjust the value as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-button {
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.edit-button {
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+hr{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* =======================Dashboard Home============================= */
+.col33 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.col33 .stat1,
+.stat2,
+.stat3 {
+  /* border: 1px solid red; */
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  text-align: center;
+}
+.col33 .stat1 p,
+.stat2 p,
+.stat3 p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.stat1 {
+  background-color: rgba(119, 184, 201, 0.418);
+}
+.stat2 {
+  background-color: rgba(0, 255, 13, 0.534);
+}
+.stat3 {
+  background-color: rgba(255, 0, 0, 0.637);
+}
+.col33 .col22 {
+  grid-column: span 4;
+}
+
+/* ================Add post results table====================== */
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  /* border: 1px solid green; */
+  padding: 8px;
+  border-radius: 2px;
+}
+tr:nth-child(even),
+table.listing thead > tr {
+  background-color: #b9bbae;
+}
+.listing {
+  width: 40vw;
+}
+
+/* ============================Profile page=============== */
+
+.sidebar li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.sidebar {
+  width: 20vw;
+  box-shadow: grey 2px 2px;
+  padding-bottom: 2vh;
+  min-height: 10vh;
+}
+
+.profile {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main {
+  width: 60vw;
+  position: absolute;
+  left: 22vw;
+  top: auto;
+}
+
+/* --------------Messages from contact me page------------ */
+.message-table {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+  margin-left: 150px;
+}
+
+.message-table th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+.message-table th {
+  background-color: rgb(6, 88, 109);
+  font-weight: bold;
+}
+
+.message-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+/* --------------Newsletter from contact blogs page------------ */
+.news-table {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+  margin-left: 250px;
+}
+
+.news-table th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+.news-table th {
+  background-color: rgb(6, 88, 109);
+  font-weight: bold;
+}
+
+.news-table td {
+  border-bottom: 1px solid #ddd;
+}
