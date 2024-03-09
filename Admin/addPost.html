@@ -5,11 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-        <link rel="stylesheet " href="../Assets/style.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="../favicon_io/site.webmanifest">
+    <link rel="stylesheet " href="../Assets/dashboardStyles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../favicon_io/site.webmanifest" />
 
     <link
       rel="stylesheet"
@@ -21,8 +35,15 @@
   </head>
   <body>
     <header>
-      <a href="../index.html"><img src="../images/logo.png" alt="" class="logo" /></a>
+      <a href="../index.html"
+        ><img src="../images/logo.png" alt="" class="logo"
+      /></a>
 
+      <button class="toggle-menu" id="toggleMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
       <nav>
         <ul class="navBar">
           <li><a href="../index.html">Home</a></li>
@@ -31,22 +52,16 @@
           <li><a href="../skills.html">Skills</a></li>
           <li><a href="../myWork.html">My work</a></li>
           <li><a href="../blog.html">Blogs</a></li>
+          <li><a href="../login.html" class="login">Log out</a></li>
         </ul>
       </nav>
-      <a href="../login.html" class="login">Log out</a>
     </header>
-    <!-- search -->
-    <div>
-      <input id="search" type="search" placeholder="search" />
-    </div>
+
     <h2 id="h2">ADD a POST</h2>
 
     <!-- flexbox -->
-    <div class="adminFlex">
-      <div class="adminContent">
-        <div class="adminColumns col11">
+    <div class="collection">
           <div class="leftTable">
-                  
             <div class="leftBox">
               <div class="leftCell">
                 <p><i class="fa-solid fa-plus"></i></p>
@@ -55,17 +70,9 @@
                 <a href="addPost.html"><p>Add post</p></a>
               </div>
             </div>
+            
+
             <div class="leftBox">
-              <div class="leftCell">
-                <p><i class="fa-solid fa-list-check"></i></p>
-              </div>
-              <div class="leftCell">
-                <a href="managePost.html"><p>Manage post</p></a>
-              </div>
-            </div>
-               
-              
-               <div class="leftBox">
               <div class="leftCell">
                 <p><i class="fa-solid fa-newspaper"></i></p>
               </div>
@@ -81,106 +88,107 @@
                 <a href="messages.html"><p>Messages</p></a>
               </div>
             </div>
-               
           </div>
-        </div>
 
-        <!-- =========================right table=========================== -->
-    <div class="container">
-      
+    <!-- =========================right table=========================== -->
       <div class="mb-5">
         <form class="row" id="addPostForm">
-          
           <div class="form-group col-md6 mb-3">
             <label for="title">Title</label><br />
-            <input type="text" name="title" id="title" placeholder="e.g: Can we really leave AI and machine learning to it so that we can ponder more strategic matters?" />
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="e.g: Can we really leave AI and machine learning to it so that we can ponder more strategic matters?"
+            />
           </div>
-         
+
           <div class="form-group col-md6 mb-3">
             <label for="category">Category</label> <br />
-                <select
-                  id="category"
-                  name="category"
-                  class="category"
-                  required="required"
-                >
-                  <option disabled selected hidden>
-                    e.g: Video games
-                  </option>
-                  <option value="Artificial Intelligence">
-                    Artificial Intelligence
-                  </option>
-                  <option value="Health and Sport">Health and Sport</option>
-                  <option value="Machine Learning">Machine Learning</option>
-                  <option value="Internet Of Things">Internet Of Things</option>
-                  <option value="Augmented Reality">Augmented Reality</option>
-                  <option value="Virtual Reality">Virtual Reality</option>
-                  <option value="Video games">Video games</option></select
-                ><br />
+            <select
+              id="category"
+              name="category"
+              class="category"
+              required="required"
+            >
+              <option disabled selected hidden>e.g: Video games</option>
+              <option value="Artificial Intelligence">
+                Artificial Intelligence
+              </option>
+              <option value="Health and Sport">Health and Sport</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="Internet Of Things">Internet Of Things</option>
+              <option value="Augmented Reality">Augmented Reality</option>
+              <option value="Virtual Reality">Virtual Reality</option>
+              <option value="Video games">Video games</option></select
+            ><br />
           </div>
           <div class="form-group col-md6 mb-3">
             <label for="author">Author</label><br />
-            <input type="text" name="author" id="author" placeholder="e.g: Jane Doe" />
-          </div>
- 
-          <div class="form-group col-md6 mb-3">
-          <div class="form-group col-md6 mb-3">
-            <label for="Image">Image</label><br />
-                <input
-                  type="file"
-                  name="image"
-                  id="linkList"
-                  placeholder=" "
-                  accept="image/*"
-                />
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="e.g: Jane Doe"
+            />
           </div>
 
-          
-          
           <div class="form-group col-md6 mb-3">
-            <label for="post">Post</label><br />
-            <textarea 
-              type="textarea"
-              name="post"
-              id="post"
-              class="form-control"
-              placeholder="e.g: Machine Learning and Augmented Reality"></textarea>
+            <div class="form-group col-md6 mb-3">
+              <label for="Image">Image</label><br />
+              <input
+                type="file"
+                name="image"
+                id="linkList"
+                placeholder=" "
+                accept="image/*"
+              />
+            </div>
+
+            <div class="form-group col-md6 mb-3">
+              <label for="post">Post</label><br />
+              <textarea
+                type="textarea"
+                name="post"
+                id="post"
+                class="form-control"
+                placeholder="e.g: Machine Learning and Augmented Reality"
+              ></textarea>
+            </div>
+            <div class="col-lg-12 mt-5">
+              <button type="submit" class="btn btn-success" id="submitBlog">
+                POST
+              </button>
+            </div>
           </div>
-          <div class="col-lg-12 mt-5">
-            <button type="submit" class="btn btn-success" id="submitBlog" >
-              POST
-            </button>
-            <!-- <button type="submit" class="btn btn-primary" id="update" >Update</button> -->
-          </div>
-        </div>
-      </form>
-    </div>
-      <hr />
-      <div class="row mt-5">
-        <div class="col-12">
-          <table class="listing" id="crudTable">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Author</th>
-                <th>Image</th>
-                <th>Post</th>
-                
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="table-data"></tbody>
-          </table>
-        </div>
+        </form>
       </div>
-    
-    
-    
+    </div>
+
+    <hr />
+    <div class="row mt-5">
+      <div class="col-12">
+        <table class="listing" id="crudTable">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Author</th>
+              <th>Image</th>
+              <th>Post</th>
+
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-data"></tbody>
+        </table>
+      </div>
+    </div>
+
     <script defer src="../Assets/addPost9.js"></script>
+    <script defer src="../Assets/index.js"></script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
   </body>
 </html>

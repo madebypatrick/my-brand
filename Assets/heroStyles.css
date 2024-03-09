@@ -77,14 +77,21 @@ header {
   margin: auto;
 }
 
+.contentFlow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
 .profilePic {
-  width: auto; /* Allow the width to adjust automatically */
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-  height: auto; /* Allow the height to adjust automatically */
-  max-height: 300px; /* Set a maximum height for the image */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
   border-radius: 0 45% 0 0;
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-  margin: 0 auto; /* Center the image horizontally */
+  margin: 0 auto;
 }
 
 /* Styles for column 1 text */
@@ -105,18 +112,15 @@ header {
   text-shadow: 10px 2px 4px;
 }
 
-
-.leftButton{
+.leftButton {
   margin: auto 0px;
 }
-
-
 
 .leftButton button {
   background-color: #b9bbae;
   border: none;
   cursor: pointer;
-  font-size: 50px; /* Decrease font size for smaller screens */
+  font-size: 50px;
   border-radius: 50%;
   height: 90px;
   width: 90px;
@@ -132,16 +136,15 @@ button a {
   color: black;
 }
 
-.rightButton{
+.rightButton {
   margin: auto 0px;
 }
-
 
 .rightButton button {
   background-color: #b9bbae;
   border: none;
   cursor: pointer;
-  font-size: 50px; /* Decrease font size for smaller screens */
+  font-size: 50px;
   border-radius: 50%;
   height: 90px;
   width: 90px;
@@ -156,14 +159,12 @@ h6 {
   margin-top: 20px;
   font-size: 20px;
   font-weight: 100;
-  /* margin-left: 42%; */
 }
 
 /* Styles for GitHub icon */
 #github {
   height: 50px;
 }
-
 
 /* Styles for social icons */
 .socials {
@@ -229,18 +230,18 @@ h6 {
   .navBar {
     display: none;
     flex-direction: column;
-    width: 20%;
+    width: 70%;
+    height: 70%;
     position: absolute;
     top: 40px;
     background-color: rgba(185, 187, 174, 0.9);
     z-index: 1;
     margin-top: 20px;
-    gap: 20px;
+    gap: 10%;
     right: 20px;
     padding: 15px 0px;
     border-radius: 5px;
   }
-
   /* Display navigation menu when active */
   .navBar.show {
     display: flex;
@@ -251,71 +252,58 @@ h6 {
     text-align: right;
     margin: 0;
     color: white;
+    font-weight: 900;
   }
 
   /* Display toggle menu */
   .toggle-menu {
     display: flex;
   }
+}
 
-  .contentFlow {
-    margin-top: 20%;
-}
-/* ---------------------------------- */
-.contentFlow {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-}
 /* ----------------------------------- */
 @media only screen and (max-width: 630px) {
   .profilePic {
-    width: auto; 
-    max-width: 100%; 
-    height: auto; 
-    max-height: 200px; 
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
     border-radius: 0 45% 0 0;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-    margin: 0 auto; 
+    margin: 0 auto;
   }
-  
-
 }
 
 /* ----------------------------------- */
 @media only screen and (max-width: 479px) {
   .profilePic {
-    width: auto; 
-    max-width: 100%; 
-    height: auto; 
-    max-height: 180px; 
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 180px;
     border-radius: 0 45% 0 0;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
-    margin: 0 auto; 
+    margin: 0 auto;
   }
-  
+
   .leftButton button {
     background-color: #b9bbae;
     border: none;
     cursor: pointer;
-    font-size: 25px; /* Decrease font size for smaller screens */
+    font-size: 25px;
     border-radius: 50%;
     height: 45px;
     width: 45px;
   }
-
   .rightButton button {
     background-color: #b9bbae;
     border: none;
     cursor: pointer;
-    font-size: 25px; /* Decrease font size for smaller screens */
+    font-size: 25px;
     border-radius: 50%;
     height: 45px;
     width: 45px;
   }
-  
-
 
   h6 {
     margin-top: 12px;
@@ -330,8 +318,4 @@ h6 {
     text-align: center;
     text-shadow: 10px 2px 4px;
   }
-  
-
-
-
 }

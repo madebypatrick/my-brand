@@ -140,18 +140,18 @@ header {
   .navBar {
     display: none;
     flex-direction: column;
-    width: 20%;
+    width: 70%;
+    height: 70%;
     position: absolute;
     top: 40px;
     background-color: rgba(185, 187, 174, 0.9);
     z-index: 1;
     margin-top: 20px;
-    gap: 20px;
+    gap: 10%;
     right: 20px;
     padding: 15px 0px;
     border-radius: 5px;
   }
-
   /* Display navigation menu when active */
   .navBar.show {
     display: flex;
@@ -162,8 +162,8 @@ header {
     text-align: right;
     margin: 0;
     color: white;
+    font-weight: 900;
   }
-
   /* Display toggle menu */
   .toggle-menu {
     display: flex;
