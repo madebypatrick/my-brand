@@ -360,10 +360,8 @@ footer {
 
 .blogCategorySingle {
   color: green;
-  margin-left: 10px;
 }
 .blogAuthorSingle {
-  margin-left: 10px;
   padding: 3px 0px;
 }
 .blogContentSingle {
@@ -408,18 +406,19 @@ footer {
 }
 
 #commentButton {
-  background-color: #007bff;
-  color: #fff;
-  padding: 12px 20px;
+  width: 200px;
+  padding: 10px;
+  background-color: #b9bbae;
+  color: black;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
 #commentButton:hover {
-  background-color: #0056b3;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ------------------------------------------- */
