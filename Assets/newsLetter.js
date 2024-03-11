@@ -15,12 +15,6 @@ fetch("https://api-mybrand-bnww.onrender.com/api/v1/newsLetter")
       // append rows 
       row.appendChild(emailCell);
 
-      // append table body
-      // row.appendChild(nameCell);
-      // row.appendChild(emailCell);
-      // row.appendChild(fromCell);
-      // row.appendChild(newsLetterCell);
-
       // append tableBody
       newsLetterTable.querySelector("tbody").appendChild(row)
     });

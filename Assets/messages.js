@@ -21,13 +21,7 @@ fetch("https://api-mybrand-bnww.onrender.com/api/v1/message")
       row.appendChild(emailCell);
       row.appendChild(fromCell);
       row.appendChild(messageCell);
-
-      // append table body
-      // row.appendChild(nameCell);
-      // row.appendChild(emailCell);
-      // row.appendChild(fromCell);
-      // row.appendChild(messageCell);
-
+      
       // append tableBody
       messageTable.querySelector("tbody").appendChild(row)
     });

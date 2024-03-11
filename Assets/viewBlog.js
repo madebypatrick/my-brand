@@ -1,4 +1,11 @@
-// alert("hello")
+// Add this function to show the loader overlay
+const showLoader = () => {
+  const loaderOverlay = document.getElementById("loader-overlay");
+  loaderOverlay.style.display = "flex";
+};
+
+// Call showLoader before fetching data
+showLoader();
 
 // ---------------------------blog display----------------
 
@@ -22,37 +29,41 @@ const fetchBlog = async () => {
   }
 };
 
-fetchBlog().then((res) => {
-  console.log(res);
+fetchBlog()
+  .then((res) => {
+    console.log(res);
 
-  const date = new Date(res.data.createdAt);
-  const formattedDate = date.toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: false,
-  });
+    const date = new Date(res.data.createdAt);
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: false,
+    });
 
-  blogPostSingle.innerHTML = `
-  <div class="viewBlogContents">
-  <h1 class="blogTitleSingle">${res.data.title}</h1>
-  <p class="blogCategorySingle">${res.data.category}</p>
+    blogPostSingle.innerHTML = `
+    <div class="viewBlogContents">
+    <h1 class="blogTitleSingle">${res.data.title}</h1>
+    <p class="blogCategorySingle">${res.data.category}</p>
 
-  <p class="blogAuthorSingle">By: ${res.data.author} | ${formattedDate}</p>
+    <p class="blogAuthorSingle">By: ${res.data.author} | ${formattedDate}</p>
 
-      <div class="blogImageSingle">
-        <img src="${res.data.image}"></img>
-      </div>
-      
-        
-        <pre style="white-space: pre-wrap;" class="blogContentSingle">${res.data.content}</pre>
-
+        <div class="blogImageSingle">
+          <img src="${res.data.image}"></img>
         </div>
-     
-  `;
-});
+        
+        
+          <pre style="white-space: pre-wrap;" class="blogContentSingle">${res.data.content}</pre>
+
+          </div>
+        
+    `;
+  })
+  .finally(() => {
+    hideLoader(); // Hide loader after fetching the blog post
+  });
 
 // ===================Comments section====================
 // ======get the comment entered========
@@ -113,5 +124,12 @@ fetch("https://api-mybrand-bnww.onrender.com/api/v1/comment")
       commentTable.querySelector("tbody").appendChild(row);
     });
   })
+  .finally(() => {
+    hideLoader(); // Hide loader after fetching and displaying comments
+  });
 
-  .catch((err) => alert(err));
+// Add this function to hide the loader overlay
+const hideLoader = () => {
+  const loaderOverlay = document.getElementById("loader-overlay");
+  loaderOverlay.style.display = "none";
+};
